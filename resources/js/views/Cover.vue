@@ -20,9 +20,9 @@
                 </div>
             </div>
             <div class="row col-11 mx-auto px-0">
-                <a class="nav-link">about</a>
-                <a class="nav-link mx-4">projects</a>
-                <a class="nav-link">contact</a>
+                <a class="nav-link h5">about</a>
+                <a class="nav-link mx-3 h5">projects</a>
+                <a class="nav-link h5">contact</a>
             </div>
         </div>
     </div>

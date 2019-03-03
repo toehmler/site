@@ -37032,11 +37032,11 @@ var staticRenderFns = [
         ),
         _vm._v(" "),
         _c("div", { staticClass: "row col-11 mx-auto px-0" }, [
-          _c("a", { staticClass: "nav-link" }, [_vm._v("about")]),
+          _c("a", { staticClass: "nav-link h5" }, [_vm._v("about")]),
           _vm._v(" "),
-          _c("a", { staticClass: "nav-link mx-4" }, [_vm._v("projects")]),
+          _c("a", { staticClass: "nav-link mx-3 h5" }, [_vm._v("projects")]),
           _vm._v(" "),
-          _c("a", { staticClass: "nav-link" }, [_vm._v("contact")])
+          _c("a", { staticClass: "nav-link h5" }, [_vm._v("contact")])
         ])
       ])
     ])
