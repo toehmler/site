@@ -1845,8 +1845,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -37032,11 +37030,9 @@ var staticRenderFns = [
         ),
         _vm._v(" "),
         _c("div", { staticClass: "row col-11 mx-auto px-0" }, [
-          _c("a", { staticClass: "nav-link h5" }, [_vm._v("about")]),
-          _vm._v(" "),
-          _c("a", { staticClass: "nav-link mx-3 h5" }, [_vm._v("projects")]),
-          _vm._v(" "),
-          _c("a", { staticClass: "nav-link h5" }, [_vm._v("contact")])
+          _c("p", { staticClass: "fw-400 text-light" }, [
+            _c("i", [_vm._v("coming soon")])
+          ])
         ])
       ])
     ])
@@ -51983,7 +51979,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     name: 'home',
     component: _js_views_Cover__WEBPACK_IMPORTED_MODULE_2__["default"],
     meta: {
-      title: 'Cover'
+      title: 'Coming Soon'
     }
   }]
 });

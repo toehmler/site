@@ -13,7 +13,7 @@ const router = new VueRouter({
             name: 'home',
             component: Cover,
             meta: {
-                title: 'Cover'
+                title: 'Coming Soon'
             }
         },
     ],
