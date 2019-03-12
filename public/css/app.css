@@ -11168,6 +11168,7 @@ h6,
 .scrollama-container .scrollama-graphic {
   flex: 5;
   height: 100vh;
+  z-index: 5;
 }
 
 .scrollama-container .scrollama-steps {
@@ -11215,24 +11216,65 @@ h6,
 }
 
 #graphic-slot {
-  transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .hidden-mobile {
-  transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
   opacity: 0;
 }
 
+@media (min-width: 768px) {
+  .hidden-mobile {
+    opacity: 1;
+  }
+}
+
 #menu-toggle {
-  position: absolute;
+  position: fixed;
+  z-index: 5;
   top: 0.5rem;
-  left: 0.5rem;
-  font-size: 1.5rem;
+  left: 0.75rem;
+  font-size: 2rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.34);
+  transition: all 200ms ease-in-out;
 }
 
 @media (min-width: 768px) {
   #menu-toggle {
     display: none;
   }
+}
+
+#menu-toggle:hover {
+  cursor: pointer;
+}
+
+.hidden-toggle {
+  transition: all 200ms ease-in-out;
+  opacity: 0;
+  pointer-events: none !important;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: #f8fafc;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+  transition: all 200ms ease-in-out;
+}
+
+#overlay.hidden-overlay {
+  transition: all 200ms ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 

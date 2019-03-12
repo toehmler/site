@@ -1874,6 +1874,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
  // for cross-browser support
 
 
@@ -1894,6 +1901,7 @@ __webpack_require__.r(__webpack_exports__);
 
       if (index > 0) {
         $('#graphic-slot').addClass('hidden-mobile');
+        $('#menu-toggle').removeClass('hidden-toggle');
       }
     },
     stepExitHandler: function stepExitHandler(_ref2) {
@@ -1904,6 +1912,8 @@ __webpack_require__.r(__webpack_exports__);
 
       if (index === 1 && direction === 'up') {
         $('#graphic-slot').removeClass('hidden-mobile');
+        $('#menu-toggle').addClass('hidden-toggle');
+        $('#menu-toggle').removeClass('is-active');
       }
     }
   }
@@ -38361,298 +38371,361 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container" },
+    { staticClass: "container-fluid", staticStyle: { position: "relative" } },
     [
       _c(
-        "Scrollama",
-        {
-          attrs: { debug: false, offset: 0.9 },
-          on: {
-            "step-enter": _vm.stepEnterHandler,
-            "step-exit": _vm.stepExitHandler
-          }
-        },
+        "div",
+        { staticClass: "container" },
         [
           _c(
-            "div",
+            "Scrollama",
             {
-              staticClass: "graphic",
-              attrs: { slot: "graphic", id: "graphic-slot" },
-              slot: "graphic"
+              attrs: { debug: false, offset: 0.9 },
+              on: {
+                "step-enter": _vm.stepEnterHandler,
+                "step-exit": _vm.stepExitHandler
+              }
             },
             [
               _c(
-                "p",
+                "div",
                 {
-                  staticClass:
-                    "h1 display-4 raleway fw-700 my-0 py-0 logo-top-text tracking-in-expand"
+                  staticClass: "graphic",
+                  attrs: { slot: "graphic", id: "graphic-slot" },
+                  slot: "graphic"
                 },
-                [_vm._v("Trey")]
+                [
+                  _c(
+                    "p",
+                    {
+                      staticClass:
+                        "h1 display-4 raleway fw-700 my-0 py-0 logo-top-text tracking-in-expand"
+                    },
+                    [_vm._v("Trey")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    {
+                      staticClass:
+                        "h1 display-4 raleway fw-700 my-0 py-0 logo-bottom-text tracking-in-expand"
+                    },
+                    [_vm._v("Oehmler")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", {
+                    staticClass: "tracking-in-expand",
+                    attrs: { id: "divider" }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "fw-500 mt-3 ml-2 tracking-in-expand d-inline",
+                      attrs: { href: "#about" }
+                    },
+                    [_vm._v("about")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "fw-500 ml-2 tracking-in-expand",
+                      attrs: { href: "#projects" }
+                    },
+                    [_vm._v("work")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "fw-500 ml-2 tracking-in-expand",
+                      attrs: { href: "#contact" }
+                    },
+                    [_vm._v("contact")]
+                  )
+                ]
               ),
               _vm._v(" "),
               _c(
-                "p",
-                {
-                  staticClass:
-                    "h1 display-4 raleway fw-700 my-0 py-0 logo-bottom-text tracking-in-expand"
-                },
-                [_vm._v("Oehmler")]
-              ),
-              _vm._v(" "),
-              _c("div", {
-                staticClass: "tracking-in-expand",
-                attrs: { id: "divider" }
-              }),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "fw-500 mt-3 ml-2 tracking-in-expand d-inline",
-                  attrs: { href: "#about" }
-                },
-                [_vm._v("about")]
+                "div",
+                { staticClass: "step", attrs: { "data-step-no": "1" } },
+                [
+                  _c(
+                    "p",
+                    { staticClass: "text-center h1 fw-500 bounce-in-top" },
+                    [_vm._v("Hi.\n              ")]
+                  ),
+                  _c("p", { staticClass: "text-center fw-300 text-focus-in" }, [
+                    _vm._v("I build websites.")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { attrs: { id: "about" } })
+                ]
               ),
               _vm._v(" "),
               _c(
-                "a",
-                {
-                  staticClass: "fw-500 ml-2 tracking-in-expand",
-                  attrs: { href: "#projects" }
-                },
-                [_vm._v("work")]
+                "div",
+                { staticClass: "step", attrs: { "data-step-no": "2" } },
+                [
+                  _c("p", { staticClass: "h5 fw-500 mb-3" }, [
+                    _vm._v(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas nibh vitae purus tincidunt malesuada. Nunc id odio nec diam blandit porttitor."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "fw-300" }, [
+                    _vm._v(
+                      "Ut eleifend eros in augue bibendum, sed tincidunt ex finibus. Phasellus non sapien posuere tortor tempor aliquet. Phasellus at ante sed nisl luctus vestibulum. Pellentesque quis ante pulvinar, sodales mi rhoncus, ultrices ex. Sed ligula lacus, iaculis eu mollis ut, consequat eget nisl. Morbi ornare nulla ut fermentum facilisis."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "fw-300 mb-5" }, [
+                    _vm._v(
+                      "Morbi massa nunc, luctus et dui eu, aliquet posuere sapien. Suspendisse eu ultricies ex, sed blandit enim. Vivamus imperdiet pulvinar dictum. Suspendisse tempor pretium aptent taciti sociosqu ad litora torquent."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "h4 fw-500" }, [
+                    _vm._v("Technical Experience")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "fw-300" }, [
+                    _vm._v(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in risus eu justo dapibus vestibulum. Nam nibh nisi, luctus et venenatis quis, commodo sed odio. Nam vestibulum nisi non enim sollicitudin dictum. Donec blandit blandit risus at fringilla. Donec varius massa ac auctor hendrerit. Nulla dui ex, rutrum tempor nisi convallis, pharetra egestas nulla. Cras scelerisque urna in egestas pretium."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                      _vm._v("HTML / CSS")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                      _vm._v("Sass")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                      _vm._v("Less")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                      _vm._v("Laravel")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                      _vm._v("Blade")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                      _vm._v("Vue.js")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                      _vm._v("React")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                      _vm._v("ES6 / Babel")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                      _vm._v("Python")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                      _vm._v("C")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                      _vm._v("Java")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                      _vm._v("MYSQL")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                      _vm._v("Photoshop")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                      _vm._v("Sketch")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { attrs: { id: "projects" } })
+                ]
               ),
               _vm._v(" "),
               _c(
-                "a",
+                "div",
+                { staticClass: "step", attrs: { "data-step-no": "3" } },
+                [
+                  _c("p", { staticClass: "h2 fw-500" }, [
+                    _vm._v("Recent Projects")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "fw-300" }, [
+                    _vm._v(
+                      "Mauris accumsan, quam sed commodo mattis, lorem eros mattis lorem, ac fermentum turpis orci eu tortor. Vestibulum tincidunt hendrerit accumsan. Duis egestas tempus diam, ac molestie turpis venenatis quis."
+                    )
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "step", attrs: { "data-step-no": "4" } },
+                [
+                  _c("img", {
+                    staticClass: "img-fluid mb-3",
+                    attrs: { src: "/domcbd.png" }
+                  }),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "h5 fw-500" }, [_vm._v("domcbd.co")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "fw-300" }, [
+                    _vm._v(
+                      "Proin varius dapibus neque venenatis iaculis. Donec pretium, enim sit amet congue iaculis, lectus tortor ornare nisl, ac lobortis lectus elit sed eros. Proin sed tempus arcu. Donec at leo a nibh laoreet pulvinar."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "fw-300" }, [
+                    _vm._v(
+                      "Ut bibendum quis dolor eget fringilla. Integer semper sapien a tellus dictum auctor. Phasellus a tempus magna. Maecenas dolor nunc, suscipit vitae pharetra et, aliquet sit amet turpis."
+                    )
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "step", attrs: { "data-step-no": "5" } },
+                [
+                  _c("img", {
+                    staticClass: "img-fluid mb-3",
+                    attrs: { src: "/dompen.png" }
+                  }),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "h5 fw-500" }, [_vm._v("dompen.co")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "fw-300" }, [
+                    _vm._v(
+                      "Donec pellentesque lacus in dolor placerat, eget fringilla magna iaculis. Nunc mollis bibendum bibendum. Mauris sed lorem faucibus, scelerisque velit a, malesuada sem."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "fw-300" }, [
+                    _vm._v(
+                      "nteger ut mauris efficitur, ultrices nisl vel, tincidunt mauris. Morbi fringilla sodales blandit. Nulla sollicitudin aliquet lectus, vel auctor sem. Morbi leo metus, pellentesque sit amet efficitur sit amet, vestibulum sit."
+                    )
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "step", attrs: { "data-step-no": "6" } },
+                [
+                  _c("img", {
+                    staticClass: "img-fluid mb-3",
+                    attrs: { src: "/onelife.png" }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "step", attrs: { "data-step-no": "7" } },
+                [
+                  _c("p", { staticClass: "h5 fw-500" }, [
+                    _vm._v("onelifemh.org")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "fw-300" }, [
+                    _vm._v(
+                      "Praesent augue nisi, pretium ut erat a, porta feugiat nulla. Nulla vitae justo mauris. Phasellus varius nunc purus, non imperdiet felis pellentesque a. Aenean pharetra ligula sit amet turpis scelerisque porta. Quisque accumsan gravida eros a egestas. Curabitur dolor dui, sollicitudin in ante in, dignissim congue tellus."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "fw-300" }, [
+                    _vm._v(
+                      "nteger ut mauris efficitur, ultrices nisl vel, tincidunt mauris. Morbi fringilla sodales blandit. Nulla sollicitudin aliquet lectus, vel auctor sem. Morbi leo metus, pellentesque sit amet efficitur sit amet, vestibulum sit."
+                    )
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
                 {
-                  staticClass: "fw-500 ml-2 tracking-in-expand",
-                  attrs: { href: "#contact" }
+                  staticClass: "step",
+                  attrs: { id: "contact", "data-step-no": "8" }
                 },
-                [_vm._v("contact")]
+                [
+                  _c("p", { staticClass: "h2 fw-500 mb-3" }, [
+                    _vm._v("Contact")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "fw-300" }, [
+                    _vm._v(
+                      "Integer pulvinar eu enim at mollis. Vivamus in dapibus leo. Ut sed risus est. Cras nec mauris euismod ligula laoreet dictum quis vitae magna. Ut viverra elementum consequat. Sed convallis eu justo vel ornare. Etiam vel sodales neque. Cras porttitor nisi in felis luctus, ac consectetur orci."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "" } }, [
+                    _c("i", { staticClass: "far fa-envelope contact-icon" }),
+                    _c("span", { staticClass: "small" }, [
+                      _vm._v("treyoehmler@gmail.com")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "" } }, [
+                    _c("i", { staticClass: "fas fa-phone contact-icon" }),
+                    _c("span", { staticClass: "small" }, [
+                      _vm._v("(203) 722-1497")
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { attrs: { href: "" } }, [
+                    _c("i", { staticClass: "fab fa-github contact-icon" }),
+                    _c("span", { staticClass: "small" }, [_vm._v("toehmler")])
+                  ])
+                ]
               )
             ]
           ),
           _vm._v(" "),
-          _c("div", { staticClass: "step", attrs: { "data-step-no": "1" } }, [
-            _c("p", { staticClass: "text-center h1 fw-500 bounce-in-top" }, [
-              _vm._v("Hi.\n          ")
-            ]),
-            _c("p", { staticClass: "text-center fw-300 text-focus-in" }, [
-              _vm._v("I build websites.")
-            ]),
-            _vm._v(" "),
-            _c("div", { attrs: { id: "about" } })
-          ]),
+          _vm._m(0),
           _vm._v(" "),
-          _c("div", { staticClass: "step", attrs: { "data-step-no": "2" } }, [
-            _c("p", { staticClass: "h5 fw-500 mb-3" }, [
-              _vm._v(
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas nibh vitae purus tincidunt malesuada. Nunc id odio nec diam blandit porttitor."
-              )
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "fw-300" }, [
-              _vm._v(
-                "Ut eleifend eros in augue bibendum, sed tincidunt ex finibus. Phasellus non sapien posuere tortor tempor aliquet. Phasellus at ante sed nisl luctus vestibulum. Pellentesque quis ante pulvinar, sodales mi rhoncus, ultrices ex. Sed ligula lacus, iaculis eu mollis ut, consequat eget nisl. Morbi ornare nulla ut fermentum facilisis."
-              )
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "fw-300 mb-5" }, [
-              _vm._v(
-                "Morbi massa nunc, luctus et dui eu, aliquet posuere sapien. Suspendisse eu ultricies ex, sed blandit enim. Vivamus imperdiet pulvinar dictum. Suspendisse tempor pretium aptent taciti sociosqu ad litora torquent."
-              )
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "h4 fw-500" }, [
-              _vm._v("Technical Experience")
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "fw-300" }, [
-              _vm._v(
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in risus eu justo dapibus vestibulum. Nam nibh nisi, luctus et venenatis quis, commodo sed odio. Nam vestibulum nisi non enim sollicitudin dictum. Donec blandit blandit risus at fringilla. Donec varius massa ac auctor hendrerit. Nulla dui ex, rutrum tempor nisi convallis, pharetra egestas nulla. Cras scelerisque urna in egestas pretium."
-              )
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
-                _vm._v("HTML / CSS")
-              ]),
-              _vm._v(" "),
-              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
-                _vm._v("Sass")
-              ]),
-              _vm._v(" "),
-              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
-                _vm._v("Less")
-              ]),
-              _vm._v(" "),
-              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
-                _vm._v("Laravel")
-              ]),
-              _vm._v(" "),
-              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
-                _vm._v("Blade")
-              ]),
-              _vm._v(" "),
-              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
-                _vm._v("Vue.js")
-              ]),
-              _vm._v(" "),
-              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
-                _vm._v("React")
-              ]),
-              _vm._v(" "),
-              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
-                _vm._v("ES6 / Babel")
-              ]),
-              _vm._v(" "),
-              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
-                _vm._v("Python")
-              ]),
-              _vm._v(" "),
-              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
-                _vm._v("C")
-              ]),
-              _vm._v(" "),
-              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
-                _vm._v("Java")
-              ]),
-              _vm._v(" "),
-              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
-                _vm._v("MYSQL")
-              ]),
-              _vm._v(" "),
-              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
-                _vm._v("Photoshop")
-              ]),
-              _vm._v(" "),
-              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
-                _vm._v("Sketch")
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { attrs: { id: "projects" } })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "step", attrs: { "data-step-no": "3" } }, [
-            _c("p", { staticClass: "h2 fw-500" }, [_vm._v("Recent Projects")]),
-            _vm._v(" "),
-            _c("p", { staticClass: "fw-300" }, [
-              _vm._v(
-                "Mauris accumsan, quam sed commodo mattis, lorem eros mattis lorem, ac fermentum turpis orci eu tortor. Vestibulum tincidunt hendrerit accumsan. Duis egestas tempus diam, ac molestie turpis venenatis quis."
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "step", attrs: { "data-step-no": "4" } }, [
-            _c("img", {
-              staticClass: "img-fluid mb-3",
-              attrs: { src: "/domcbd.png" }
-            }),
-            _vm._v(" "),
-            _c("p", { staticClass: "h5 fw-500" }, [_vm._v("domcbd.co")]),
-            _vm._v(" "),
-            _c("p", { staticClass: "fw-300" }, [
-              _vm._v(
-                "Proin varius dapibus neque venenatis iaculis. Donec pretium, enim sit amet congue iaculis, lectus tortor ornare nisl, ac lobortis lectus elit sed eros. Proin sed tempus arcu. Donec at leo a nibh laoreet pulvinar."
-              )
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "fw-300" }, [
-              _vm._v(
-                "Ut bibendum quis dolor eget fringilla. Integer semper sapien a tellus dictum auctor. Phasellus a tempus magna. Maecenas dolor nunc, suscipit vitae pharetra et, aliquet sit amet turpis."
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "step", attrs: { "data-step-no": "5" } }, [
-            _c("img", {
-              staticClass: "img-fluid mb-3",
-              attrs: { src: "/dompen.png" }
-            }),
-            _vm._v(" "),
-            _c("p", { staticClass: "h5 fw-500" }, [_vm._v("dompen.co")]),
-            _vm._v(" "),
-            _c("p", { staticClass: "fw-300" }, [
-              _vm._v(
-                "Donec pellentesque lacus in dolor placerat, eget fringilla magna iaculis. Nunc mollis bibendum bibendum. Mauris sed lorem faucibus, scelerisque velit a, malesuada sem."
-              )
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "fw-300" }, [
-              _vm._v(
-                "nteger ut mauris efficitur, ultrices nisl vel, tincidunt mauris. Morbi fringilla sodales blandit. Nulla sollicitudin aliquet lectus, vel auctor sem. Morbi leo metus, pellentesque sit amet efficitur sit amet, vestibulum sit."
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "step", attrs: { "data-step-no": "6" } }, [
-            _c("img", {
-              staticClass: "img-fluid mb-3",
-              attrs: { src: "/onelife.png" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "step", attrs: { "data-step-no": "7" } }, [
-            _c("p", { staticClass: "h5 fw-500" }, [_vm._v("onelifemh.org")]),
-            _vm._v(" "),
-            _c("p", { staticClass: "fw-300" }, [
-              _vm._v(
-                "Praesent augue nisi, pretium ut erat a, porta feugiat nulla. Nulla vitae justo mauris. Phasellus varius nunc purus, non imperdiet felis pellentesque a. Aenean pharetra ligula sit amet turpis scelerisque porta. Quisque accumsan gravida eros a egestas. Curabitur dolor dui, sollicitudin in ante in, dignissim congue tellus."
-              )
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "fw-300" }, [
-              _vm._v(
-                "nteger ut mauris efficitur, ultrices nisl vel, tincidunt mauris. Morbi fringilla sodales blandit. Nulla sollicitudin aliquet lectus, vel auctor sem. Morbi leo metus, pellentesque sit amet efficitur sit amet, vestibulum sit."
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "step",
-              attrs: { id: "contact", "data-step-no": "8" }
-            },
-            [
-              _c("p", { staticClass: "h2 fw-500 mb-3" }, [_vm._v("Contact")]),
-              _vm._v(" "),
-              _c("p", { staticClass: "fw-300" }, [
-                _vm._v(
-                  "Integer pulvinar eu enim at mollis. Vivamus in dapibus leo. Ut sed risus est. Cras nec mauris euismod ligula laoreet dictum quis vitae magna. Ut viverra elementum consequat. Sed convallis eu justo vel ornare. Etiam vel sodales neque. Cras porttitor nisi in felis luctus, ac consectetur orci."
-                )
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "" } }, [
-                _c("i", { staticClass: "far fa-envelope contact-icon" }),
-                _c("span", { staticClass: "small" }, [
-                  _vm._v("treyoehmler@gmail.com")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "" } }, [
-                _c("i", { staticClass: "fas fa-phone contact-icon" }),
-                _c("span", { staticClass: "small" }, [_vm._v("(203) 722-1497")])
-              ]),
-              _vm._v(" "),
-              _c("a", { attrs: { href: "" } }, [
-                _c("i", { staticClass: "fab fa-github contact-icon" }),
-                _c("span", { staticClass: "small" }, [_vm._v("toehmler")])
-              ])
-            ]
-          )
-        ]
-      ),
-      _vm._v(" "),
-      _c("i", { staticClass: "material-icons", attrs: { id: "menu-toggle" } }, [
-        _vm._v("menu")
-      ])
-    ],
-    1
+          _c("div", { staticClass: "hidden-overlay", attrs: { id: "overlay" } })
+        ],
+        1
+      )
+    ]
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "hamburger hamburger--spring hidden-toggle",
+        attrs: { id: "menu-toggle", type: "button" }
+      },
+      [
+        _c("span", { staticClass: "hamburger-box" }, [
+          _c("span", { staticClass: "hamburger-inner" })
+        ])
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -55180,6 +55253,12 @@ var app = new Vue({
 /* harmony default export */ __webpack_exports__["default"] = (app);
 $(document).ready(function () {
   $(this).scrollTop(0);
+  $('#menu-toggle').click(function () {
+    $(this).toggleClass('is-active');
+    $('#graphic-slot').toggleClass('hidden-mobile');
+    $('#overlay').toggleClass('hidden-overlay');
+    $('body').toggleClass('no-scroll');
+  });
 });
 
 /***/ }),

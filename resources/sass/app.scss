@@ -90,6 +90,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
   .scrollama-graphic {
     flex: 5;
     height: 100vh;
+    z-index:5;
   }
   .scrollama-steps {
     flex: 6;
@@ -128,19 +129,51 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
 }
 
 #graphic-slot {
-    transition:all 300ms ease-in-out;
+    transition:all 200ms ease-in-out;
 }
 .hidden-mobile {
-    transition:all 300ms ease-in-out;
+    transition:all 200ms ease-in-out;
+    @include media-breakpoint-up(md) {opacity:1;}
     opacity:0;
 }
 
 #menu-toggle {
-    position:absolute;
+    position:fixed;
+    z-index: 5;
     top:0.5rem;
-    left:0.5rem;
+    left:0.75rem;
     @include media-breakpoint-up(md) {display:none;}
-    font-size:1.5rem;
+    font-size:2rem;
+    text-shadow:0 1px 3px rgba(0,0,0,0.20), 0 1px 2px rgba(0,0,0,0.34);
+    transition:all 200ms ease-in-out;
+    &:hover {
+        cursor:pointer;
+    }
 }
+.hidden-toggle {
+    transition:all 200ms ease-in-out;
+    opacity:0;
+    pointer-events:none !important;
+}
+
+#overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:3;
+    background-color:$body-bg;
+    opacity:0.8;
+    height:100%;
+    width:100%;
+    transition:all 200ms ease-in-out;
+    &.hidden-overlay {
+        transition:all 200ms ease-in-out;
+        opacity:0;
+        pointer-events:none;
+    }
+
+}
+
+.no-scroll {overflow:hidden}
 
 
