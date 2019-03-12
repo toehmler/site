@@ -125,7 +125,10 @@ export default {
         if (index > 0) {
             $('#graphic-slot').addClass('hidden-mobile');
             $('#menu-toggle').removeClass('hidden-toggle');
+        } else if (index === 0) {
+            $('#menu-toggle').addClass('hidden-toggle');
         }
+            
     },
     stepExitHandler ({element, index, direction}) {
         if (index === 1 && direction === 'up') {
