@@ -24,9 +24,11 @@
         "vue-template-compiler": "^2.6.8"
     },
     "dependencies": {
+        "body-scroll-lock": "^2.6.1",
         "intersection-observer": "^0.5.1",
         "scrollama": "^1.4.4",
         "vue-router": "^3.0.2",
-        "vue-scrollama": "^1.1.1"
+        "vue-scrollama": "^1.1.1",
+        "vue-scrollto": "^2.14.0"
     }
 }

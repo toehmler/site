@@ -3,7 +3,10 @@ import VueRouter from 'vue-router';
 
 import Cover from '@/js/views/Cover';
 
+import VueScrollTo from 'vue-scrollto';
+
 Vue.use(VueRouter);
+Vue.use(VueScrollTo);
 
 const router = new VueRouter({
     mode: 'history',
@@ -13,7 +16,7 @@ const router = new VueRouter({
             name: 'home',
             component: Cover,
             meta: {
-                title: 'Coming Soon'
+                title: 'Trey Oehmler'
             }
         },
     ],

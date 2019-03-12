@@ -10,6 +10,7 @@
 
 @import 'type';
 
+.project-link:hover {cursor:pointer}
 .badge {
     margin-right:0.3rem;
     font-size:0.7rem;
@@ -162,7 +163,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
     left:0;
     z-index:3;
     background-color:$body-bg;
-    opacity:0.8;
+    opacity:0.9;
     height:100%;
     width:100%;
     transition:all 200ms ease-in-out;
@@ -174,6 +175,9 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
 
 }
 
-.no-scroll {overflow:hidden}
+.no-scroll {
+    overflow:hidden;
+}
+
 
 

@@ -39,12 +39,5 @@ export default app;
 
 $(document).ready(function(){
     $(this).scrollTop(0);
-    $('#menu-toggle').click(function() {
-        $(this).toggleClass('is-active');
-        $('#graphic-slot').toggleClass('hidden-mobile');
-        $('#overlay').toggleClass('hidden-overlay');
-        $('body').toggleClass('no-scroll');
-    });
-        
 });
 
