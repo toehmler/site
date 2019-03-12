@@ -1754,39 +1754,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/App.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/App.vue?vue&type=script&lang=js& ***!
@@ -1813,6 +1780,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var intersection_observer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! intersection-observer */ "./node_modules/intersection-observer/intersection-observer.js");
+/* harmony import */ var intersection_observer__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(intersection_observer__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_scrollama__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-scrollama */ "./node_modules/vue-scrollama/dist/vue-scrollama.esm.js");
 //
 //
 //
@@ -1845,7 +1815,99 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+ // for cross-browser support
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Scrollama: vue_scrollama__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  data: function data() {
+    return {
+      currStep: null
+    };
+  },
+  methods: {
+    stepEnterHandler: function stepEnterHandler(_ref) {
+      var element = _ref.element,
+          index = _ref.index,
+          direction = _ref.direction;
+
+      if (index > 0) {
+        $('#graphic-slot').addClass('hidden-mobile');
+      }
+    },
+    stepExitHandler: function stepExitHandler(_ref2) {
+      var element = _ref2.element,
+          index = _ref2.index,
+          direction = _ref2.direction;
+      console.log(index);
+
+      if (index === 1 && direction === 'up') {
+        $('#graphic-slot').removeClass('hidden-mobile');
+      }
+    }
+  }
+});
 
 /***/ }),
 
@@ -6290,6 +6352,849 @@ __webpack_require__.r(__webpack_exports__);
 
 }));
 //# sourceMappingURL=bootstrap.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-scrollama/dist/vue-scrollama.css?vue&type=style&index=0&lang=css&":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-scrollama/dist/vue-scrollama.css?vue&type=style&index=0&lang=css& ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.scrollama-container {\n  position: relative;\n}\n.scrollama-graphic {\n  position: -webkit-sticky;\n  position: sticky;\n  top: 0;\n}\n.scrollama-steps {\n  position: relative;\n}\n.resize-observer[data-v-b329ee4c]{position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;border:none;background-color:transparent;pointer-events:none;display:block;overflow:hidden;opacity:0}.resize-observer[data-v-b329ee4c] object{display:block;position:absolute;top:0;left:0;height:100%;width:100%;overflow:hidden;pointer-events:none;z-index:-1}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/lib/css-base.js":
+/*!*************************************************!*\
+  !*** ./node_modules/css-loader/lib/css-base.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/intersection-observer/intersection-observer.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/intersection-observer/intersection-observer.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Copyright 2016 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the W3C SOFTWARE AND DOCUMENT NOTICE AND LICENSE.
+ *
+ *  https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+ *
+ */
+
+(function(window, document) {
+'use strict';
+
+
+// Exits early if all IntersectionObserver and IntersectionObserverEntry
+// features are natively supported.
+if ('IntersectionObserver' in window &&
+    'IntersectionObserverEntry' in window &&
+    'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
+
+  // Minimal polyfill for Edge 15's lack of `isIntersecting`
+  // See: https://github.com/w3c/IntersectionObserver/issues/211
+  if (!('isIntersecting' in window.IntersectionObserverEntry.prototype)) {
+    Object.defineProperty(window.IntersectionObserverEntry.prototype,
+      'isIntersecting', {
+      get: function () {
+        return this.intersectionRatio > 0;
+      }
+    });
+  }
+  return;
+}
+
+
+/**
+ * An IntersectionObserver registry. This registry exists to hold a strong
+ * reference to IntersectionObserver instances currently observing a target
+ * element. Without this registry, instances without another reference may be
+ * garbage collected.
+ */
+var registry = [];
+
+
+/**
+ * Creates the global IntersectionObserverEntry constructor.
+ * https://w3c.github.io/IntersectionObserver/#intersection-observer-entry
+ * @param {Object} entry A dictionary of instance properties.
+ * @constructor
+ */
+function IntersectionObserverEntry(entry) {
+  this.time = entry.time;
+  this.target = entry.target;
+  this.rootBounds = entry.rootBounds;
+  this.boundingClientRect = entry.boundingClientRect;
+  this.intersectionRect = entry.intersectionRect || getEmptyRect();
+  this.isIntersecting = !!entry.intersectionRect;
+
+  // Calculates the intersection ratio.
+  var targetRect = this.boundingClientRect;
+  var targetArea = targetRect.width * targetRect.height;
+  var intersectionRect = this.intersectionRect;
+  var intersectionArea = intersectionRect.width * intersectionRect.height;
+
+  // Sets intersection ratio.
+  if (targetArea) {
+    // Round the intersection ratio to avoid floating point math issues:
+    // https://github.com/w3c/IntersectionObserver/issues/324
+    this.intersectionRatio = Number((intersectionArea / targetArea).toFixed(4));
+  } else {
+    // If area is zero and is intersecting, sets to 1, otherwise to 0
+    this.intersectionRatio = this.isIntersecting ? 1 : 0;
+  }
+}
+
+
+/**
+ * Creates the global IntersectionObserver constructor.
+ * https://w3c.github.io/IntersectionObserver/#intersection-observer-interface
+ * @param {Function} callback The function to be invoked after intersection
+ *     changes have queued. The function is not invoked if the queue has
+ *     been emptied by calling the `takeRecords` method.
+ * @param {Object=} opt_options Optional configuration options.
+ * @constructor
+ */
+function IntersectionObserver(callback, opt_options) {
+
+  var options = opt_options || {};
+
+  if (typeof callback != 'function') {
+    throw new Error('callback must be a function');
+  }
+
+  if (options.root && options.root.nodeType != 1) {
+    throw new Error('root must be an Element');
+  }
+
+  // Binds and throttles `this._checkForIntersections`.
+  this._checkForIntersections = throttle(
+      this._checkForIntersections.bind(this), this.THROTTLE_TIMEOUT);
+
+  // Private properties.
+  this._callback = callback;
+  this._observationTargets = [];
+  this._queuedEntries = [];
+  this._rootMarginValues = this._parseRootMargin(options.rootMargin);
+
+  // Public properties.
+  this.thresholds = this._initThresholds(options.threshold);
+  this.root = options.root || null;
+  this.rootMargin = this._rootMarginValues.map(function(margin) {
+    return margin.value + margin.unit;
+  }).join(' ');
+}
+
+
+/**
+ * The minimum interval within which the document will be checked for
+ * intersection changes.
+ */
+IntersectionObserver.prototype.THROTTLE_TIMEOUT = 100;
+
+
+/**
+ * The frequency in which the polyfill polls for intersection changes.
+ * this can be updated on a per instance basis and must be set prior to
+ * calling `observe` on the first target.
+ */
+IntersectionObserver.prototype.POLL_INTERVAL = null;
+
+/**
+ * Use a mutation observer on the root element
+ * to detect intersection changes.
+ */
+IntersectionObserver.prototype.USE_MUTATION_OBSERVER = true;
+
+
+/**
+ * Starts observing a target element for intersection changes based on
+ * the thresholds values.
+ * @param {Element} target The DOM element to observe.
+ */
+IntersectionObserver.prototype.observe = function(target) {
+  var isTargetAlreadyObserved = this._observationTargets.some(function(item) {
+    return item.element == target;
+  });
+
+  if (isTargetAlreadyObserved) {
+    return;
+  }
+
+  if (!(target && target.nodeType == 1)) {
+    throw new Error('target must be an Element');
+  }
+
+  this._registerInstance();
+  this._observationTargets.push({element: target, entry: null});
+  this._monitorIntersections();
+  this._checkForIntersections();
+};
+
+
+/**
+ * Stops observing a target element for intersection changes.
+ * @param {Element} target The DOM element to observe.
+ */
+IntersectionObserver.prototype.unobserve = function(target) {
+  this._observationTargets =
+      this._observationTargets.filter(function(item) {
+
+    return item.element != target;
+  });
+  if (!this._observationTargets.length) {
+    this._unmonitorIntersections();
+    this._unregisterInstance();
+  }
+};
+
+
+/**
+ * Stops observing all target elements for intersection changes.
+ */
+IntersectionObserver.prototype.disconnect = function() {
+  this._observationTargets = [];
+  this._unmonitorIntersections();
+  this._unregisterInstance();
+};
+
+
+/**
+ * Returns any queue entries that have not yet been reported to the
+ * callback and clears the queue. This can be used in conjunction with the
+ * callback to obtain the absolute most up-to-date intersection information.
+ * @return {Array} The currently queued entries.
+ */
+IntersectionObserver.prototype.takeRecords = function() {
+  var records = this._queuedEntries.slice();
+  this._queuedEntries = [];
+  return records;
+};
+
+
+/**
+ * Accepts the threshold value from the user configuration object and
+ * returns a sorted array of unique threshold values. If a value is not
+ * between 0 and 1 and error is thrown.
+ * @private
+ * @param {Array|number=} opt_threshold An optional threshold value or
+ *     a list of threshold values, defaulting to [0].
+ * @return {Array} A sorted list of unique and valid threshold values.
+ */
+IntersectionObserver.prototype._initThresholds = function(opt_threshold) {
+  var threshold = opt_threshold || [0];
+  if (!Array.isArray(threshold)) threshold = [threshold];
+
+  return threshold.sort().filter(function(t, i, a) {
+    if (typeof t != 'number' || isNaN(t) || t < 0 || t > 1) {
+      throw new Error('threshold must be a number between 0 and 1 inclusively');
+    }
+    return t !== a[i - 1];
+  });
+};
+
+
+/**
+ * Accepts the rootMargin value from the user configuration object
+ * and returns an array of the four margin values as an object containing
+ * the value and unit properties. If any of the values are not properly
+ * formatted or use a unit other than px or %, and error is thrown.
+ * @private
+ * @param {string=} opt_rootMargin An optional rootMargin value,
+ *     defaulting to '0px'.
+ * @return {Array<Object>} An array of margin objects with the keys
+ *     value and unit.
+ */
+IntersectionObserver.prototype._parseRootMargin = function(opt_rootMargin) {
+  var marginString = opt_rootMargin || '0px';
+  var margins = marginString.split(/\s+/).map(function(margin) {
+    var parts = /^(-?\d*\.?\d+)(px|%)$/.exec(margin);
+    if (!parts) {
+      throw new Error('rootMargin must be specified in pixels or percent');
+    }
+    return {value: parseFloat(parts[1]), unit: parts[2]};
+  });
+
+  // Handles shorthand.
+  margins[1] = margins[1] || margins[0];
+  margins[2] = margins[2] || margins[0];
+  margins[3] = margins[3] || margins[1];
+
+  return margins;
+};
+
+
+/**
+ * Starts polling for intersection changes if the polling is not already
+ * happening, and if the page's visibility state is visible.
+ * @private
+ */
+IntersectionObserver.prototype._monitorIntersections = function() {
+  if (!this._monitoringIntersections) {
+    this._monitoringIntersections = true;
+
+    // If a poll interval is set, use polling instead of listening to
+    // resize and scroll events or DOM mutations.
+    if (this.POLL_INTERVAL) {
+      this._monitoringInterval = setInterval(
+          this._checkForIntersections, this.POLL_INTERVAL);
+    }
+    else {
+      addEvent(window, 'resize', this._checkForIntersections, true);
+      addEvent(document, 'scroll', this._checkForIntersections, true);
+
+      if (this.USE_MUTATION_OBSERVER && 'MutationObserver' in window) {
+        this._domObserver = new MutationObserver(this._checkForIntersections);
+        this._domObserver.observe(document, {
+          attributes: true,
+          childList: true,
+          characterData: true,
+          subtree: true
+        });
+      }
+    }
+  }
+};
+
+
+/**
+ * Stops polling for intersection changes.
+ * @private
+ */
+IntersectionObserver.prototype._unmonitorIntersections = function() {
+  if (this._monitoringIntersections) {
+    this._monitoringIntersections = false;
+
+    clearInterval(this._monitoringInterval);
+    this._monitoringInterval = null;
+
+    removeEvent(window, 'resize', this._checkForIntersections, true);
+    removeEvent(document, 'scroll', this._checkForIntersections, true);
+
+    if (this._domObserver) {
+      this._domObserver.disconnect();
+      this._domObserver = null;
+    }
+  }
+};
+
+
+/**
+ * Scans each observation target for intersection changes and adds them
+ * to the internal entries queue. If new entries are found, it
+ * schedules the callback to be invoked.
+ * @private
+ */
+IntersectionObserver.prototype._checkForIntersections = function() {
+  var rootIsInDom = this._rootIsInDom();
+  var rootRect = rootIsInDom ? this._getRootRect() : getEmptyRect();
+
+  this._observationTargets.forEach(function(item) {
+    var target = item.element;
+    var targetRect = getBoundingClientRect(target);
+    var rootContainsTarget = this._rootContainsTarget(target);
+    var oldEntry = item.entry;
+    var intersectionRect = rootIsInDom && rootContainsTarget &&
+        this._computeTargetAndRootIntersection(target, rootRect);
+
+    var newEntry = item.entry = new IntersectionObserverEntry({
+      time: now(),
+      target: target,
+      boundingClientRect: targetRect,
+      rootBounds: rootRect,
+      intersectionRect: intersectionRect
+    });
+
+    if (!oldEntry) {
+      this._queuedEntries.push(newEntry);
+    } else if (rootIsInDom && rootContainsTarget) {
+      // If the new entry intersection ratio has crossed any of the
+      // thresholds, add a new entry.
+      if (this._hasCrossedThreshold(oldEntry, newEntry)) {
+        this._queuedEntries.push(newEntry);
+      }
+    } else {
+      // If the root is not in the DOM or target is not contained within
+      // root but the previous entry for this target had an intersection,
+      // add a new record indicating removal.
+      if (oldEntry && oldEntry.isIntersecting) {
+        this._queuedEntries.push(newEntry);
+      }
+    }
+  }, this);
+
+  if (this._queuedEntries.length) {
+    this._callback(this.takeRecords(), this);
+  }
+};
+
+
+/**
+ * Accepts a target and root rect computes the intersection between then
+ * following the algorithm in the spec.
+ * TODO(philipwalton): at this time clip-path is not considered.
+ * https://w3c.github.io/IntersectionObserver/#calculate-intersection-rect-algo
+ * @param {Element} target The target DOM element
+ * @param {Object} rootRect The bounding rect of the root after being
+ *     expanded by the rootMargin value.
+ * @return {?Object} The final intersection rect object or undefined if no
+ *     intersection is found.
+ * @private
+ */
+IntersectionObserver.prototype._computeTargetAndRootIntersection =
+    function(target, rootRect) {
+
+  // If the element isn't displayed, an intersection can't happen.
+  if (window.getComputedStyle(target).display == 'none') return;
+
+  var targetRect = getBoundingClientRect(target);
+  var intersectionRect = targetRect;
+  var parent = getParentNode(target);
+  var atRoot = false;
+
+  while (!atRoot) {
+    var parentRect = null;
+    var parentComputedStyle = parent.nodeType == 1 ?
+        window.getComputedStyle(parent) : {};
+
+    // If the parent isn't displayed, an intersection can't happen.
+    if (parentComputedStyle.display == 'none') return;
+
+    if (parent == this.root || parent == document) {
+      atRoot = true;
+      parentRect = rootRect;
+    } else {
+      // If the element has a non-visible overflow, and it's not the <body>
+      // or <html> element, update the intersection rect.
+      // Note: <body> and <html> cannot be clipped to a rect that's not also
+      // the document rect, so no need to compute a new intersection.
+      if (parent != document.body &&
+          parent != document.documentElement &&
+          parentComputedStyle.overflow != 'visible') {
+        parentRect = getBoundingClientRect(parent);
+      }
+    }
+
+    // If either of the above conditionals set a new parentRect,
+    // calculate new intersection data.
+    if (parentRect) {
+      intersectionRect = computeRectIntersection(parentRect, intersectionRect);
+
+      if (!intersectionRect) break;
+    }
+    parent = getParentNode(parent);
+  }
+  return intersectionRect;
+};
+
+
+/**
+ * Returns the root rect after being expanded by the rootMargin value.
+ * @return {Object} The expanded root rect.
+ * @private
+ */
+IntersectionObserver.prototype._getRootRect = function() {
+  var rootRect;
+  if (this.root) {
+    rootRect = getBoundingClientRect(this.root);
+  } else {
+    // Use <html>/<body> instead of window since scroll bars affect size.
+    var html = document.documentElement;
+    var body = document.body;
+    rootRect = {
+      top: 0,
+      left: 0,
+      right: html.clientWidth || body.clientWidth,
+      width: html.clientWidth || body.clientWidth,
+      bottom: html.clientHeight || body.clientHeight,
+      height: html.clientHeight || body.clientHeight
+    };
+  }
+  return this._expandRectByRootMargin(rootRect);
+};
+
+
+/**
+ * Accepts a rect and expands it by the rootMargin value.
+ * @param {Object} rect The rect object to expand.
+ * @return {Object} The expanded rect.
+ * @private
+ */
+IntersectionObserver.prototype._expandRectByRootMargin = function(rect) {
+  var margins = this._rootMarginValues.map(function(margin, i) {
+    return margin.unit == 'px' ? margin.value :
+        margin.value * (i % 2 ? rect.width : rect.height) / 100;
+  });
+  var newRect = {
+    top: rect.top - margins[0],
+    right: rect.right + margins[1],
+    bottom: rect.bottom + margins[2],
+    left: rect.left - margins[3]
+  };
+  newRect.width = newRect.right - newRect.left;
+  newRect.height = newRect.bottom - newRect.top;
+
+  return newRect;
+};
+
+
+/**
+ * Accepts an old and new entry and returns true if at least one of the
+ * threshold values has been crossed.
+ * @param {?IntersectionObserverEntry} oldEntry The previous entry for a
+ *    particular target element or null if no previous entry exists.
+ * @param {IntersectionObserverEntry} newEntry The current entry for a
+ *    particular target element.
+ * @return {boolean} Returns true if a any threshold has been crossed.
+ * @private
+ */
+IntersectionObserver.prototype._hasCrossedThreshold =
+    function(oldEntry, newEntry) {
+
+  // To make comparing easier, an entry that has a ratio of 0
+  // but does not actually intersect is given a value of -1
+  var oldRatio = oldEntry && oldEntry.isIntersecting ?
+      oldEntry.intersectionRatio || 0 : -1;
+  var newRatio = newEntry.isIntersecting ?
+      newEntry.intersectionRatio || 0 : -1;
+
+  // Ignore unchanged ratios
+  if (oldRatio === newRatio) return;
+
+  for (var i = 0; i < this.thresholds.length; i++) {
+    var threshold = this.thresholds[i];
+
+    // Return true if an entry matches a threshold or if the new ratio
+    // and the old ratio are on the opposite sides of a threshold.
+    if (threshold == oldRatio || threshold == newRatio ||
+        threshold < oldRatio !== threshold < newRatio) {
+      return true;
+    }
+  }
+};
+
+
+/**
+ * Returns whether or not the root element is an element and is in the DOM.
+ * @return {boolean} True if the root element is an element and is in the DOM.
+ * @private
+ */
+IntersectionObserver.prototype._rootIsInDom = function() {
+  return !this.root || containsDeep(document, this.root);
+};
+
+
+/**
+ * Returns whether or not the target element is a child of root.
+ * @param {Element} target The target element to check.
+ * @return {boolean} True if the target element is a child of root.
+ * @private
+ */
+IntersectionObserver.prototype._rootContainsTarget = function(target) {
+  return containsDeep(this.root || document, target);
+};
+
+
+/**
+ * Adds the instance to the global IntersectionObserver registry if it isn't
+ * already present.
+ * @private
+ */
+IntersectionObserver.prototype._registerInstance = function() {
+  if (registry.indexOf(this) < 0) {
+    registry.push(this);
+  }
+};
+
+
+/**
+ * Removes the instance from the global IntersectionObserver registry.
+ * @private
+ */
+IntersectionObserver.prototype._unregisterInstance = function() {
+  var index = registry.indexOf(this);
+  if (index != -1) registry.splice(index, 1);
+};
+
+
+/**
+ * Returns the result of the performance.now() method or null in browsers
+ * that don't support the API.
+ * @return {number} The elapsed time since the page was requested.
+ */
+function now() {
+  return window.performance && performance.now && performance.now();
+}
+
+
+/**
+ * Throttles a function and delays its execution, so it's only called at most
+ * once within a given time period.
+ * @param {Function} fn The function to throttle.
+ * @param {number} timeout The amount of time that must pass before the
+ *     function can be called again.
+ * @return {Function} The throttled function.
+ */
+function throttle(fn, timeout) {
+  var timer = null;
+  return function () {
+    if (!timer) {
+      timer = setTimeout(function() {
+        fn();
+        timer = null;
+      }, timeout);
+    }
+  };
+}
+
+
+/**
+ * Adds an event handler to a DOM node ensuring cross-browser compatibility.
+ * @param {Node} node The DOM node to add the event handler to.
+ * @param {string} event The event name.
+ * @param {Function} fn The event handler to add.
+ * @param {boolean} opt_useCapture Optionally adds the even to the capture
+ *     phase. Note: this only works in modern browsers.
+ */
+function addEvent(node, event, fn, opt_useCapture) {
+  if (typeof node.addEventListener == 'function') {
+    node.addEventListener(event, fn, opt_useCapture || false);
+  }
+  else if (typeof node.attachEvent == 'function') {
+    node.attachEvent('on' + event, fn);
+  }
+}
+
+
+/**
+ * Removes a previously added event handler from a DOM node.
+ * @param {Node} node The DOM node to remove the event handler from.
+ * @param {string} event The event name.
+ * @param {Function} fn The event handler to remove.
+ * @param {boolean} opt_useCapture If the event handler was added with this
+ *     flag set to true, it should be set to true here in order to remove it.
+ */
+function removeEvent(node, event, fn, opt_useCapture) {
+  if (typeof node.removeEventListener == 'function') {
+    node.removeEventListener(event, fn, opt_useCapture || false);
+  }
+  else if (typeof node.detatchEvent == 'function') {
+    node.detatchEvent('on' + event, fn);
+  }
+}
+
+
+/**
+ * Returns the intersection between two rect objects.
+ * @param {Object} rect1 The first rect.
+ * @param {Object} rect2 The second rect.
+ * @return {?Object} The intersection rect or undefined if no intersection
+ *     is found.
+ */
+function computeRectIntersection(rect1, rect2) {
+  var top = Math.max(rect1.top, rect2.top);
+  var bottom = Math.min(rect1.bottom, rect2.bottom);
+  var left = Math.max(rect1.left, rect2.left);
+  var right = Math.min(rect1.right, rect2.right);
+  var width = right - left;
+  var height = bottom - top;
+
+  return (width >= 0 && height >= 0) && {
+    top: top,
+    bottom: bottom,
+    left: left,
+    right: right,
+    width: width,
+    height: height
+  };
+}
+
+
+/**
+ * Shims the native getBoundingClientRect for compatibility with older IE.
+ * @param {Element} el The element whose bounding rect to get.
+ * @return {Object} The (possibly shimmed) rect of the element.
+ */
+function getBoundingClientRect(el) {
+  var rect;
+
+  try {
+    rect = el.getBoundingClientRect();
+  } catch (err) {
+    // Ignore Windows 7 IE11 "Unspecified error"
+    // https://github.com/w3c/IntersectionObserver/pull/205
+  }
+
+  if (!rect) return getEmptyRect();
+
+  // Older IE
+  if (!(rect.width && rect.height)) {
+    rect = {
+      top: rect.top,
+      right: rect.right,
+      bottom: rect.bottom,
+      left: rect.left,
+      width: rect.right - rect.left,
+      height: rect.bottom - rect.top
+    };
+  }
+  return rect;
+}
+
+
+/**
+ * Returns an empty rect object. An empty rect is returned when an element
+ * is not in the DOM.
+ * @return {Object} The empty rect.
+ */
+function getEmptyRect() {
+  return {
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    width: 0,
+    height: 0
+  };
+}
+
+/**
+ * Checks to see if a parent element contains a child element (including inside
+ * shadow DOM).
+ * @param {Node} parent The parent element.
+ * @param {Node} child The child element.
+ * @return {boolean} True if the parent node contains the child node.
+ */
+function containsDeep(parent, child) {
+  var node = child;
+  while (node) {
+    if (node == parent) return true;
+
+    node = getParentNode(node);
+  }
+  return false;
+}
+
+
+/**
+ * Gets the parent node of an element or its host element if the parent node
+ * is a shadow root.
+ * @param {Node} node The node whose parent to get.
+ * @return {Node|null} The parent node or null if no parent exists.
+ */
+function getParentNode(node) {
+  var parent = node.parentNode;
+
+  if (parent && parent.nodeType == 11 && parent.host) {
+    // If the parent is a shadow root, return the host element.
+    return parent.host;
+  }
+  return parent;
+}
+
+
+// Exposes the constructors globally.
+window.IntersectionObserver = IntersectionObserver;
+window.IntersectionObserverEntry = IntersectionObserverEntry;
+
+}(window, document));
 
 
 /***/ }),
@@ -36801,6 +37706,545 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-scrollama/dist/vue-scrollama.css?vue&type=style&index=0&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-scrollama/dist/vue-scrollama.css?vue&type=style&index=0&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../vue-loader/lib/loaders/stylePostLoader.js!../../postcss-loader/src??ref--6-2!./vue-scrollama.css?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-scrollama/dist/vue-scrollama.css?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/lib/addStyles.js":
+/*!****************************************************!*\
+  !*** ./node_modules/style-loader/lib/addStyles.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+
+var stylesInDom = {};
+
+var	memoize = function (fn) {
+	var memo;
+
+	return function () {
+		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+		return memo;
+	};
+};
+
+var isOldIE = memoize(function () {
+	// Test for IE <= 9 as proposed by Browserhacks
+	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+	// Tests for existence of standard globals is to allow style-loader
+	// to operate correctly into non-standard environments
+	// @see https://github.com/webpack-contrib/style-loader/issues/177
+	return window && document && document.all && !window.atob;
+});
+
+var getTarget = function (target, parent) {
+  if (parent){
+    return parent.querySelector(target);
+  }
+  return document.querySelector(target);
+};
+
+var getElement = (function (fn) {
+	var memo = {};
+
+	return function(target, parent) {
+                // If passing function in options, then use it for resolve "head" element.
+                // Useful for Shadow Root style i.e
+                // {
+                //   insertInto: function () { return document.querySelector("#foo").shadowRoot }
+                // }
+                if (typeof target === 'function') {
+                        return target();
+                }
+                if (typeof memo[target] === "undefined") {
+			var styleTarget = getTarget.call(this, target, parent);
+			// Special case to return head of iframe instead of iframe itself
+			if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+				try {
+					// This will throw an exception if access to iframe is blocked
+					// due to cross-origin restrictions
+					styleTarget = styleTarget.contentDocument.head;
+				} catch(e) {
+					styleTarget = null;
+				}
+			}
+			memo[target] = styleTarget;
+		}
+		return memo[target]
+	};
+})();
+
+var singleton = null;
+var	singletonCounter = 0;
+var	stylesInsertedAtTop = [];
+
+var	fixUrls = __webpack_require__(/*! ./urls */ "./node_modules/style-loader/lib/urls.js");
+
+module.exports = function(list, options) {
+	if (typeof DEBUG !== "undefined" && DEBUG) {
+		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+	}
+
+	options = options || {};
+
+	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
+
+	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+	// tags it will allow on a page
+	if (!options.singleton && typeof options.singleton !== "boolean") options.singleton = isOldIE();
+
+	// By default, add <style> tags to the <head> element
+        if (!options.insertInto) options.insertInto = "head";
+
+	// By default, add <style> tags to the bottom of the target
+	if (!options.insertAt) options.insertAt = "bottom";
+
+	var styles = listToStyles(list, options);
+
+	addStylesToDom(styles, options);
+
+	return function update (newList) {
+		var mayRemove = [];
+
+		for (var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+
+			domStyle.refs--;
+			mayRemove.push(domStyle);
+		}
+
+		if(newList) {
+			var newStyles = listToStyles(newList, options);
+			addStylesToDom(newStyles, options);
+		}
+
+		for (var i = 0; i < mayRemove.length; i++) {
+			var domStyle = mayRemove[i];
+
+			if(domStyle.refs === 0) {
+				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
+
+				delete stylesInDom[domStyle.id];
+			}
+		}
+	};
+};
+
+function addStylesToDom (styles, options) {
+	for (var i = 0; i < styles.length; i++) {
+		var item = styles[i];
+		var domStyle = stylesInDom[item.id];
+
+		if(domStyle) {
+			domStyle.refs++;
+
+			for(var j = 0; j < domStyle.parts.length; j++) {
+				domStyle.parts[j](item.parts[j]);
+			}
+
+			for(; j < item.parts.length; j++) {
+				domStyle.parts.push(addStyle(item.parts[j], options));
+			}
+		} else {
+			var parts = [];
+
+			for(var j = 0; j < item.parts.length; j++) {
+				parts.push(addStyle(item.parts[j], options));
+			}
+
+			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+		}
+	}
+}
+
+function listToStyles (list, options) {
+	var styles = [];
+	var newStyles = {};
+
+	for (var i = 0; i < list.length; i++) {
+		var item = list[i];
+		var id = options.base ? item[0] + options.base : item[0];
+		var css = item[1];
+		var media = item[2];
+		var sourceMap = item[3];
+		var part = {css: css, media: media, sourceMap: sourceMap};
+
+		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
+		else newStyles[id].parts.push(part);
+	}
+
+	return styles;
+}
+
+function insertStyleElement (options, style) {
+	var target = getElement(options.insertInto)
+
+	if (!target) {
+		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
+	}
+
+	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
+
+	if (options.insertAt === "top") {
+		if (!lastStyleElementInsertedAtTop) {
+			target.insertBefore(style, target.firstChild);
+		} else if (lastStyleElementInsertedAtTop.nextSibling) {
+			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
+		} else {
+			target.appendChild(style);
+		}
+		stylesInsertedAtTop.push(style);
+	} else if (options.insertAt === "bottom") {
+		target.appendChild(style);
+	} else if (typeof options.insertAt === "object" && options.insertAt.before) {
+		var nextSibling = getElement(options.insertAt.before, target);
+		target.insertBefore(style, nextSibling);
+	} else {
+		throw new Error("[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n");
+	}
+}
+
+function removeStyleElement (style) {
+	if (style.parentNode === null) return false;
+	style.parentNode.removeChild(style);
+
+	var idx = stylesInsertedAtTop.indexOf(style);
+	if(idx >= 0) {
+		stylesInsertedAtTop.splice(idx, 1);
+	}
+}
+
+function createStyleElement (options) {
+	var style = document.createElement("style");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+
+	if(options.attrs.nonce === undefined) {
+		var nonce = getNonce();
+		if (nonce) {
+			options.attrs.nonce = nonce;
+		}
+	}
+
+	addAttrs(style, options.attrs);
+	insertStyleElement(options, style);
+
+	return style;
+}
+
+function createLinkElement (options) {
+	var link = document.createElement("link");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+	options.attrs.rel = "stylesheet";
+
+	addAttrs(link, options.attrs);
+	insertStyleElement(options, link);
+
+	return link;
+}
+
+function addAttrs (el, attrs) {
+	Object.keys(attrs).forEach(function (key) {
+		el.setAttribute(key, attrs[key]);
+	});
+}
+
+function getNonce() {
+	if (false) {}
+
+	return __webpack_require__.nc;
+}
+
+function addStyle (obj, options) {
+	var style, update, remove, result;
+
+	// If a transform function was defined, run it on the css
+	if (options.transform && obj.css) {
+	    result = typeof options.transform === 'function'
+		 ? options.transform(obj.css) 
+		 : options.transform.default(obj.css);
+
+	    if (result) {
+	    	// If transform returns a value, use that instead of the original css.
+	    	// This allows running runtime transformations on the css.
+	    	obj.css = result;
+	    } else {
+	    	// If the transform function returns a falsy value, don't add this css.
+	    	// This allows conditional loading of css
+	    	return function() {
+	    		// noop
+	    	};
+	    }
+	}
+
+	if (options.singleton) {
+		var styleIndex = singletonCounter++;
+
+		style = singleton || (singleton = createStyleElement(options));
+
+		update = applyToSingletonTag.bind(null, style, styleIndex, false);
+		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+
+	} else if (
+		obj.sourceMap &&
+		typeof URL === "function" &&
+		typeof URL.createObjectURL === "function" &&
+		typeof URL.revokeObjectURL === "function" &&
+		typeof Blob === "function" &&
+		typeof btoa === "function"
+	) {
+		style = createLinkElement(options);
+		update = updateLink.bind(null, style, options);
+		remove = function () {
+			removeStyleElement(style);
+
+			if(style.href) URL.revokeObjectURL(style.href);
+		};
+	} else {
+		style = createStyleElement(options);
+		update = applyToTag.bind(null, style);
+		remove = function () {
+			removeStyleElement(style);
+		};
+	}
+
+	update(obj);
+
+	return function updateStyle (newObj) {
+		if (newObj) {
+			if (
+				newObj.css === obj.css &&
+				newObj.media === obj.media &&
+				newObj.sourceMap === obj.sourceMap
+			) {
+				return;
+			}
+
+			update(obj = newObj);
+		} else {
+			remove();
+		}
+	};
+}
+
+var replaceText = (function () {
+	var textStore = [];
+
+	return function (index, replacement) {
+		textStore[index] = replacement;
+
+		return textStore.filter(Boolean).join('\n');
+	};
+})();
+
+function applyToSingletonTag (style, index, remove, obj) {
+	var css = remove ? "" : obj.css;
+
+	if (style.styleSheet) {
+		style.styleSheet.cssText = replaceText(index, css);
+	} else {
+		var cssNode = document.createTextNode(css);
+		var childNodes = style.childNodes;
+
+		if (childNodes[index]) style.removeChild(childNodes[index]);
+
+		if (childNodes.length) {
+			style.insertBefore(cssNode, childNodes[index]);
+		} else {
+			style.appendChild(cssNode);
+		}
+	}
+}
+
+function applyToTag (style, obj) {
+	var css = obj.css;
+	var media = obj.media;
+
+	if(media) {
+		style.setAttribute("media", media)
+	}
+
+	if(style.styleSheet) {
+		style.styleSheet.cssText = css;
+	} else {
+		while(style.firstChild) {
+			style.removeChild(style.firstChild);
+		}
+
+		style.appendChild(document.createTextNode(css));
+	}
+}
+
+function updateLink (link, options, obj) {
+	var css = obj.css;
+	var sourceMap = obj.sourceMap;
+
+	/*
+		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
+		and there is no publicPath defined then lets turn convertToAbsoluteUrls
+		on by default.  Otherwise default to the convertToAbsoluteUrls option
+		directly
+	*/
+	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
+
+	if (options.convertToAbsoluteUrls || autoFixUrls) {
+		css = fixUrls(css);
+	}
+
+	if (sourceMap) {
+		// http://stackoverflow.com/a/26603875
+		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+	}
+
+	var blob = new Blob([css], { type: "text/css" });
+
+	var oldSrc = link.href;
+
+	link.href = URL.createObjectURL(blob);
+
+	if(oldSrc) URL.revokeObjectURL(oldSrc);
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/lib/urls.js":
+/*!***********************************************!*\
+  !*** ./node_modules/style-loader/lib/urls.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * When source maps are enabled, `style-loader` uses a link element with a data-uri to
+ * embed the css on the page. This breaks all relative urls because now they are relative to a
+ * bundle instead of the current page.
+ *
+ * One solution is to only use full urls, but that may be impossible.
+ *
+ * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
+ *
+ * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
+ *
+ */
+
+module.exports = function (css) {
+  // get current location
+  var location = typeof window !== "undefined" && window.location;
+
+  if (!location) {
+    throw new Error("fixUrls requires window.location");
+  }
+
+	// blank or null?
+	if (!css || typeof css !== "string") {
+	  return css;
+  }
+
+  var baseUrl = location.protocol + "//" + location.host;
+  var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
+
+	// convert each url(...)
+	/*
+	This regular expression is just a way to recursively match brackets within
+	a string.
+
+	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
+	   (  = Start a capturing group
+	     (?:  = Start a non-capturing group
+	         [^)(]  = Match anything that isn't a parentheses
+	         |  = OR
+	         \(  = Match a start parentheses
+	             (?:  = Start another non-capturing groups
+	                 [^)(]+  = Match anything that isn't a parentheses
+	                 |  = OR
+	                 \(  = Match a start parentheses
+	                     [^)(]*  = Match anything that isn't a parentheses
+	                 \)  = Match a end parentheses
+	             )  = End Group
+              *\) = Match anything and then a close parens
+          )  = Close non-capturing group
+          *  = Match anything
+       )  = Close capturing group
+	 \)  = Match a close parens
+
+	 /gi  = Get all matches, not the first.  Be case insensitive.
+	 */
+	var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function(fullMatch, origUrl) {
+		// strip quotes (if they exist)
+		var unquotedOrigUrl = origUrl
+			.trim()
+			.replace(/^"(.*)"$/, function(o, $1){ return $1; })
+			.replace(/^'(.*)'$/, function(o, $1){ return $1; });
+
+		// already a full url? no change
+		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/|\s*$)/i.test(unquotedOrigUrl)) {
+		  return fullMatch;
+		}
+
+		// convert the url to a full url
+		var newUrl;
+
+		if (unquotedOrigUrl.indexOf("//") === 0) {
+		  	//TODO: should we add protocol?
+			newUrl = unquotedOrigUrl;
+		} else if (unquotedOrigUrl.indexOf("/") === 0) {
+			// path should be relative to the base url
+			newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
+		} else {
+			// path should be relative to current directory
+			newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
+		}
+
+		// send back the fixed url(...)
+		return "url(" + JSON.stringify(newUrl) + ")";
+	});
+
+	// send back the fixed css
+	return fixedCss;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/timers-browserify/main.js":
 /*!************************************************!*\
   !*** ./node_modules/timers-browserify/main.js ***!
@@ -36876,53 +38320,6 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&":
-/*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e& ***!
-  \*******************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    I'm an example component.\n                "
-              )
-            ])
-          ])
-        ])
-      ])
-    ])
-  }
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/App.vue?vue&type=template&id=91ac6b5c&":
 /*!*************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/App.vue?vue&type=template&id=91ac6b5c& ***!
@@ -36962,82 +38359,300 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { attrs: { id: "cover" } }, [
-      _c("div", { staticClass: "container" }, [
-        _c(
-          "div",
-          { staticClass: "row justify-content-center align-items-center" },
-          [
-            _c("div", { staticClass: "col-11" }, [
-              _c("div", { staticClass: "d-none d-md-block" }, [
-                _c(
-                  "p",
-                  {
-                    staticClass:
-                      "h1 display-3 raleway text-light fw-300 my-0 py-0"
-                  },
-                  [_vm._v("TREY")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "p",
-                  {
-                    staticClass:
-                      "h1 display-3 raleway text-light fw-600 my-0 py-0 logo-bottom-text"
-                  },
-                  [_vm._v("OEHMLER")]
-                )
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [
+      _c(
+        "Scrollama",
+        {
+          attrs: { debug: false, offset: 0.9 },
+          on: {
+            "step-enter": _vm.stepEnterHandler,
+            "step-exit": _vm.stepExitHandler
+          }
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass: "graphic",
+              attrs: { slot: "graphic", id: "graphic-slot" },
+              slot: "graphic"
+            },
+            [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "h1 display-4 raleway fw-700 my-0 py-0 logo-top-text tracking-in-expand"
+                },
+                [_vm._v("Trey")]
+              ),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "h1 display-4 raleway fw-700 my-0 py-0 logo-bottom-text tracking-in-expand"
+                },
+                [_vm._v("Oehmler")]
+              ),
+              _vm._v(" "),
+              _c("div", {
+                staticClass: "tracking-in-expand",
+                attrs: { id: "divider" }
+              }),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "fw-500 mt-3 ml-2 tracking-in-expand d-inline",
+                  attrs: { href: "#about" }
+                },
+                [_vm._v("about")]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "fw-500 ml-2 tracking-in-expand",
+                  attrs: { href: "#projects" }
+                },
+                [_vm._v("work")]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "fw-500 ml-2 tracking-in-expand",
+                  attrs: { href: "#contact" }
+                },
+                [_vm._v("contact")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "step", attrs: { "data-step-no": "1" } }, [
+            _c("p", { staticClass: "text-center h1 fw-500 bounce-in-top" }, [
+              _vm._v("Hi.\n          ")
+            ]),
+            _c("p", { staticClass: "text-center fw-300 text-focus-in" }, [
+              _vm._v("I build websites.")
+            ]),
+            _vm._v(" "),
+            _c("div", { attrs: { id: "about" } })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "step", attrs: { "data-step-no": "2" } }, [
+            _c("p", { staticClass: "h5 fw-500 mb-3" }, [
+              _vm._v(
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas nibh vitae purus tincidunt malesuada. Nunc id odio nec diam blandit porttitor."
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "fw-300" }, [
+              _vm._v(
+                "Ut eleifend eros in augue bibendum, sed tincidunt ex finibus. Phasellus non sapien posuere tortor tempor aliquet. Phasellus at ante sed nisl luctus vestibulum. Pellentesque quis ante pulvinar, sodales mi rhoncus, ultrices ex. Sed ligula lacus, iaculis eu mollis ut, consequat eget nisl. Morbi ornare nulla ut fermentum facilisis."
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "fw-300 mb-5" }, [
+              _vm._v(
+                "Morbi massa nunc, luctus et dui eu, aliquet posuere sapien. Suspendisse eu ultricies ex, sed blandit enim. Vivamus imperdiet pulvinar dictum. Suspendisse tempor pretium aptent taciti sociosqu ad litora torquent."
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "h4 fw-500" }, [
+              _vm._v("Technical Experience")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "fw-300" }, [
+              _vm._v(
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in risus eu justo dapibus vestibulum. Nam nibh nisi, luctus et venenatis quis, commodo sed odio. Nam vestibulum nisi non enim sollicitudin dictum. Donec blandit blandit risus at fringilla. Donec varius massa ac auctor hendrerit. Nulla dui ex, rutrum tempor nisi convallis, pharetra egestas nulla. Cras scelerisque urna in egestas pretium."
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                _vm._v("HTML / CSS")
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "d-md-none" }, [
-                _c(
-                  "p",
-                  {
-                    staticClass:
-                      "h1 display-4 raleway text-light fw-300 my-0 py-0"
-                  },
-                  [_vm._v("TREY")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "p",
-                  {
-                    staticClass:
-                      "h1 display-4 raleway text-light fw-600 my-0 py-0 logo-bottom-text"
-                  },
-                  [_vm._v("OEHMLER")]
-                )
+              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                _vm._v("Sass")
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                _vm._v("Less")
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                _vm._v("Laravel")
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                _vm._v("Blade")
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                _vm._v("Vue.js")
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                _vm._v("React")
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                _vm._v("ES6 / Babel")
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                _vm._v("Python")
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                _vm._v("C")
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                _vm._v("Java")
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                _vm._v("MYSQL")
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                _vm._v("Photoshop")
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "badge badge-pill badge-dark" }, [
+                _vm._v("Sketch")
               ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-11 mt-3 mb-4 mt-sm-0 mb-sm-3" }, [
-              _c("h2", { staticClass: "d-none d-sm-block text-light fw-300" }, [
-                _vm._v("Full stack web development and digital design.")
+            _c("div", { attrs: { id: "projects" } })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "step", attrs: { "data-step-no": "3" } }, [
+            _c("p", { staticClass: "h2 fw-500" }, [_vm._v("Recent Projects")]),
+            _vm._v(" "),
+            _c("p", { staticClass: "fw-300" }, [
+              _vm._v(
+                "Mauris accumsan, quam sed commodo mattis, lorem eros mattis lorem, ac fermentum turpis orci eu tortor. Vestibulum tincidunt hendrerit accumsan. Duis egestas tempus diam, ac molestie turpis venenatis quis."
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "step", attrs: { "data-step-no": "4" } }, [
+            _c("img", {
+              staticClass: "img-fluid mb-3",
+              attrs: { src: "/domcbd.png" }
+            }),
+            _vm._v(" "),
+            _c("p", { staticClass: "h5 fw-500" }, [_vm._v("domcbd.co")]),
+            _vm._v(" "),
+            _c("p", { staticClass: "fw-300" }, [
+              _vm._v(
+                "Proin varius dapibus neque venenatis iaculis. Donec pretium, enim sit amet congue iaculis, lectus tortor ornare nisl, ac lobortis lectus elit sed eros. Proin sed tempus arcu. Donec at leo a nibh laoreet pulvinar."
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "fw-300" }, [
+              _vm._v(
+                "Ut bibendum quis dolor eget fringilla. Integer semper sapien a tellus dictum auctor. Phasellus a tempus magna. Maecenas dolor nunc, suscipit vitae pharetra et, aliquet sit amet turpis."
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "step", attrs: { "data-step-no": "5" } }, [
+            _c("img", {
+              staticClass: "img-fluid mb-3",
+              attrs: { src: "/dompen.png" }
+            }),
+            _vm._v(" "),
+            _c("p", { staticClass: "h5 fw-500" }, [_vm._v("dompen.co")]),
+            _vm._v(" "),
+            _c("p", { staticClass: "fw-300" }, [
+              _vm._v(
+                "Donec pellentesque lacus in dolor placerat, eget fringilla magna iaculis. Nunc mollis bibendum bibendum. Mauris sed lorem faucibus, scelerisque velit a, malesuada sem."
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "fw-300" }, [
+              _vm._v(
+                "nteger ut mauris efficitur, ultrices nisl vel, tincidunt mauris. Morbi fringilla sodales blandit. Nulla sollicitudin aliquet lectus, vel auctor sem. Morbi leo metus, pellentesque sit amet efficitur sit amet, vestibulum sit."
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "step", attrs: { "data-step-no": "6" } }, [
+            _c("img", {
+              staticClass: "img-fluid mb-3",
+              attrs: { src: "/onelife.png" }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "step", attrs: { "data-step-no": "7" } }, [
+            _c("p", { staticClass: "h5 fw-500" }, [_vm._v("onelifemh.org")]),
+            _vm._v(" "),
+            _c("p", { staticClass: "fw-300" }, [
+              _vm._v(
+                "Praesent augue nisi, pretium ut erat a, porta feugiat nulla. Nulla vitae justo mauris. Phasellus varius nunc purus, non imperdiet felis pellentesque a. Aenean pharetra ligula sit amet turpis scelerisque porta. Quisque accumsan gravida eros a egestas. Curabitur dolor dui, sollicitudin in ante in, dignissim congue tellus."
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "fw-300" }, [
+              _vm._v(
+                "nteger ut mauris efficitur, ultrices nisl vel, tincidunt mauris. Morbi fringilla sodales blandit. Nulla sollicitudin aliquet lectus, vel auctor sem. Morbi leo metus, pellentesque sit amet efficitur sit amet, vestibulum sit."
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "step",
+              attrs: { id: "contact", "data-step-no": "8" }
+            },
+            [
+              _c("p", { staticClass: "h2 fw-500 mb-3" }, [_vm._v("Contact")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "fw-300" }, [
+                _vm._v(
+                  "Integer pulvinar eu enim at mollis. Vivamus in dapibus leo. Ut sed risus est. Cras nec mauris euismod ligula laoreet dictum quis vitae magna. Ut viverra elementum consequat. Sed convallis eu justo vel ornare. Etiam vel sodales neque. Cras porttitor nisi in felis luctus, ac consectetur orci."
+                )
               ]),
               _vm._v(" "),
-              _c("h4", { staticClass: "d-sm-none text-light fw-300" }, [
-                _vm._v("Full stack web development and digital design.")
+              _c("a", { attrs: { href: "" } }, [
+                _c("i", { staticClass: "far fa-envelope contact-icon" }),
+                _c("span", { staticClass: "small" }, [
+                  _vm._v("treyoehmler@gmail.com")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "" } }, [
+                _c("i", { staticClass: "fas fa-phone contact-icon" }),
+                _c("span", { staticClass: "small" }, [_vm._v("(203) 722-1497")])
+              ]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "" } }, [
+                _c("i", { staticClass: "fab fa-github contact-icon" }),
+                _c("span", { staticClass: "small" }, [_vm._v("toehmler")])
               ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "row col-11 mx-auto px-0" }, [
-          _c("p", { staticClass: "fw-400 text-light" }, [
-            _c("i", [_vm._v("coming soon")])
-          ])
-        ])
+            ]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c("i", { staticClass: "material-icons", attrs: { id: "menu-toggle" } }, [
+        _vm._v("menu")
       ])
-    ])
-  }
-]
+    ],
+    1
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -39779,6 +41394,1745 @@ if (inBrowser && window.Vue) {
 
 /* harmony default export */ __webpack_exports__["default"] = (VueRouter);
 
+
+/***/ }),
+
+/***/ "./node_modules/vue-scrollama/dist/vue-scrollama.css?vue&type=style&index=0&lang=css&":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/vue-scrollama/dist/vue-scrollama.css?vue&type=style&index=0&lang=css& ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _style_loader_index_js_css_loader_index_js_ref_6_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_6_2_vue_scrollama_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../style-loader!../../css-loader??ref--6-1!../../vue-loader/lib/loaders/stylePostLoader.js!../../postcss-loader/src??ref--6-2!./vue-scrollama.css?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-scrollama/dist/vue-scrollama.css?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _style_loader_index_js_css_loader_index_js_ref_6_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_6_2_vue_scrollama_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_index_js_css_loader_index_js_ref_6_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_6_2_vue_scrollama_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _style_loader_index_js_css_loader_index_js_ref_6_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_6_2_vue_scrollama_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _style_loader_index_js_css_loader_index_js_ref_6_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_6_2_vue_scrollama_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_style_loader_index_js_css_loader_index_js_ref_6_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_6_2_vue_scrollama_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./node_modules/vue-scrollama/dist/vue-scrollama.esm.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/vue-scrollama/dist/vue-scrollama.esm.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(global) {var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+
+function createCommonjsModule(fn, module) {
+	return module = { exports: {} }, fn(module, module.exports), module.exports;
+}
+
+var scrollama = createCommonjsModule(function (module, exports) {
+(function (global, factory) {
+	module.exports = factory();
+}(commonjsGlobal, (function () {
+// DOM helper functions
+
+// private
+function selectionToArray(selection) {
+  var len = selection.length;
+  var result = [];
+  for (var i = 0; i < len; i += 1) {
+    result.push(selection[i]);
+  }
+  return result;
+}
+
+// public
+function select(selector) {
+  if (selector instanceof Element) { return selector; }
+  else if (typeof selector === 'string')
+    { return document.querySelector(selector); }
+  return null;
+}
+
+function selectAll(selector, parent) {
+  if ( parent === void 0 ) { parent = document; }
+
+  if (typeof selector === 'string') {
+    return selectionToArray(parent.querySelectorAll(selector));
+  } else if (selector instanceof Element) {
+    return selectionToArray([selector]);
+  } else if (selector instanceof NodeList) {
+    return selectionToArray(selector);
+  } else if (selector instanceof Array) {
+    return selector;
+  }
+  return [];
+}
+
+function getStepId(ref) {
+  var id = ref.id;
+  var i = ref.i;
+
+  return ("scrollama__debug-step--" + id + "-" + i);
+}
+
+function getOffsetId(ref) {
+  var id = ref.id;
+
+  return ("scrollama__debug-offset--" + id);
+}
+
+// SETUP
+
+function setupOffset(ref) {
+  var id = ref.id;
+  var offsetVal = ref.offsetVal;
+  var stepClass = ref.stepClass;
+
+  var el = document.createElement('div');
+  el.setAttribute('id', getOffsetId({ id: id }));
+  el.setAttribute('class', 'scrollama__debug-offset');
+
+  el.style.position = 'fixed';
+  el.style.left = '0';
+  el.style.width = '100%';
+  el.style.height = '0px';
+  el.style.borderTop = '2px dashed black';
+  el.style.zIndex = '9999';
+
+  var text = document.createElement('p');
+  text.innerText = "\"." + stepClass + "\" trigger: " + offsetVal;
+  text.style.fontSize = '12px';
+  text.style.fontFamily = 'monospace';
+  text.style.color = 'black';
+  text.style.margin = '0';
+  text.style.padding = '6px';
+  el.appendChild(text);
+  document.body.appendChild(el);
+}
+
+function setup(ref) {
+  var id = ref.id;
+  var offsetVal = ref.offsetVal;
+  var stepEl = ref.stepEl;
+
+  var stepClass = stepEl[0].getAttribute('class');
+  setupOffset({ id: id, offsetVal: offsetVal, stepClass: stepClass });
+}
+
+// UPDATE
+function updateOffset(ref) {
+  var id = ref.id;
+  var offsetMargin = ref.offsetMargin;
+  var offsetVal = ref.offsetVal;
+
+  var idVal = getOffsetId({ id: id });
+  var el = document.querySelector(("#" + idVal));
+  el.style.top = offsetMargin + "px";
+}
+
+function update(ref) {
+  var id = ref.id;
+  var stepOffsetHeight = ref.stepOffsetHeight;
+  var offsetMargin = ref.offsetMargin;
+  var offsetVal = ref.offsetVal;
+
+  updateOffset({ id: id, offsetMargin: offsetMargin });
+}
+
+function notifyStep(ref) {
+  var id = ref.id;
+  var index = ref.index;
+  var state = ref.state;
+
+  var idVal = getStepId({ id: id, i: index });
+  var elA = document.querySelector(("#" + idVal + "_above"));
+  var elB = document.querySelector(("#" + idVal + "_below"));
+  var display = state === 'enter' ? 'block' : 'none';
+
+  if (elA) { elA.style.display = display; }
+  if (elB) { elB.style.display = display; }
+}
+
+function scrollama() {
+  var ZERO_MOE = 1; // zero with some rounding margin of error
+  var callback = {};
+  var io = {};
+
+  var containerEl = null;
+  var graphicEl = null;
+  var stepEl = null;
+
+  var id = null;
+  var offsetVal = 0;
+  var offsetMargin = 0;
+  var vh = 0;
+  var ph = 0;
+  var stepOffsetHeight = null;
+  var stepOffsetTop = null;
+  var bboxGraphic = null;
+
+  var isReady = false;
+  var isEnabled = false;
+  var debugMode = false;
+  var progressMode = false;
+  var progressThreshold = 0;
+  var preserveOrder = false;
+  var triggerOnce = false;
+
+  var stepStates = null;
+  var containerState = null;
+  var previousYOffset = -1;
+  var direction = null;
+
+  var exclude = [];
+
+  // HELPERS
+  function generateId() {
+    var a = 'abcdefghijklmnopqrstuv';
+    var l = a.length;
+    var t = new Date().getTime();
+    var r = [0, 0, 0].map(function (d) { return a[Math.floor(Math.random() * l)]; }).join('');
+    return ("" + r + t);
+  }
+
+  //www.gomakethings.com/how-to-get-an-elements-distance-from-the-top-of-the-page-with-vanilla-javascript/
+  function getOffsetTop(el) {
+    // Set our distance placeholder
+    var distance = 0;
+
+    // Loop up the DOM
+    if (el.offsetParent) {
+      do {
+        distance += el.offsetTop;
+        el = el.offsetParent;
+      } while (el);
+    }
+
+    // Return our distance
+    return distance < 0 ? 0 : distance;
+  }
+
+  function getPageHeight() {
+    var body = document.body;
+    var html = document.documentElement;
+
+    return Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight
+    );
+  }
+
+  function getIndex(element) {
+    return +element.getAttribute('data-scrollama-index');
+  }
+
+  function updateDirection() {
+    if (window.pageYOffset > previousYOffset) { direction = 'down'; }
+    else if (window.pageYOffset < previousYOffset) { direction = 'up'; }
+    previousYOffset = window.pageYOffset;
+  }
+
+  function handleResize() {
+    vh = window.innerHeight;
+    ph = getPageHeight();
+
+    bboxGraphic = graphicEl ? graphicEl.getBoundingClientRect() : null;
+
+    offsetMargin = offsetVal * vh;
+
+    stepOffsetHeight = stepEl ? stepEl.map(function (el) { return el.offsetHeight; }) : [];
+
+    stepOffsetTop = stepEl ? stepEl.map(getOffsetTop) : [];
+
+    if (isEnabled && isReady) { updateIO(); }
+
+    if (debugMode)
+      { update({ id: id, stepOffsetHeight: stepOffsetHeight, offsetMargin: offsetMargin, offsetVal: offsetVal }); }
+  }
+
+  function handleEnable(enable) {
+    if (enable && !isEnabled) {
+      if (isReady) { updateIO(); }
+      isEnabled = true;
+    } else if (!enable) {
+      if (io.top) { io.top.disconnect(); }
+      if (io.bottom) { io.bottom.disconnect(); }
+      if (io.stepAbove) { io.stepAbove.forEach(function (d) { return d.disconnect(); }); }
+      if (io.stepBelow) { io.stepBelow.forEach(function (d) { return d.disconnect(); }); }
+      if (io.stepProgress) { io.stepProgress.forEach(function (d) { return d.disconnect(); }); }
+      if (io.viewportAbove) { io.viewportAbove.forEach(function (d) { return d.disconnect(); }); }
+      if (io.viewportBelow) { io.viewportBelow.forEach(function (d) { return d.disconnect(); }); }
+      isEnabled = false;
+    }
+  }
+
+  function createThreshold(height) {
+    var count = Math.ceil(height / progressThreshold);
+    var t = [];
+    var ratio = 1 / count;
+    for (var i = 0; i < count; i++) {
+      t.push(i * ratio);
+    }
+    return t;
+  }
+
+  // NOTIFY CALLBACKS
+  function notifyOthers(index, location) {
+    if (location === 'above') {
+      // check if steps above/below were skipped and should be notified first
+      for (var i = 0; i < index; i++) {
+        var ss = stepStates[i];
+        if (ss.state === 'enter') { notifyStepExit(stepEl[i], 'down'); }
+        if (ss.direction === 'up') {
+          notifyStepEnter(stepEl[i], 'down', false);
+          notifyStepExit(stepEl[i], 'down');
+        }
+      }
+    } else if (location === 'below') {
+      for (var i$1 = stepStates.length - 1; i$1 > index; i$1--) {
+        var ss$1 = stepStates[i$1];
+        if (ss$1.state === 'enter') {
+          notifyStepExit(stepEl[i$1], 'up');
+        }
+        if (ss$1.direction === 'down') {
+          notifyStepEnter(stepEl[i$1], 'up', false);
+          notifyStepExit(stepEl[i$1], 'up');
+        }
+      }
+    }
+  }
+
+  function notifyStepEnter(element, direction, check) {
+    if ( check === void 0 ) { check = true; }
+
+    var index = getIndex(element);
+    var resp = { element: element, index: index, direction: direction };
+
+    // store most recent trigger
+    stepStates[index].direction = direction;
+    stepStates[index].state = 'enter';
+
+    if (preserveOrder && check && direction === 'down')
+      { notifyOthers(index, 'above'); }
+
+    if (preserveOrder && check && direction === 'up')
+      { notifyOthers(index, 'below'); }
+
+    if (
+      callback.stepEnter &&
+      typeof callback.stepEnter === 'function' &&
+      !exclude[index]
+    ) {
+      callback.stepEnter(resp, stepStates);
+      if (debugMode) { notifyStep({ id: id, index: index, state: 'enter' }); }
+      if (triggerOnce) { exclude[index] = true; }
+    }
+
+    if (progressMode) {
+      if (direction === 'down') { notifyStepProgress(element, 0); }
+      else { notifyStepProgress(element, 1); }
+    }
+  }
+
+  function notifyStepExit(element, direction) {
+    var index = getIndex(element);
+    var resp = { element: element, index: index, direction: direction };
+
+    // store most recent trigger
+    stepStates[index].direction = direction;
+    stepStates[index].state = 'exit';
+
+    if (progressMode) {
+      if (direction === 'down') { notifyStepProgress(element, 1); }
+      else { notifyStepProgress(element, 0); }
+    }
+
+    if (callback.stepExit && typeof callback.stepExit === 'function') {
+      callback.stepExit(resp, stepStates);
+      if (debugMode) { notifyStep({ id: id, index: index, state: 'exit' }); }
+    }
+  }
+
+  function notifyStepProgress(element, progress) {
+    var index = getIndex(element);
+    var resp = { element: element, index: index, progress: progress };
+    if (callback.stepProgress && typeof callback.stepProgress === 'function')
+      { callback.stepProgress(resp); }
+  }
+
+  function notifyContainerEnter() {
+    var resp = { direction: direction };
+    containerState.direction = direction;
+    containerState.state = 'enter';
+    if (
+      callback.containerEnter &&
+      typeof callback.containerEnter === 'function'
+    )
+      { callback.containerEnter(resp); }
+  }
+
+  function notifyContainerExit() {
+    var resp = { direction: direction };
+    containerState.direction = direction;
+    containerState.state = 'exit';
+    if (callback.containerExit && typeof callback.containerExit === 'function')
+      { callback.containerExit(resp); }
+  }
+
+  // OBSERVER - INTERSECT HANDLING
+
+  // if TOP edge of step crosses threshold,
+  // bottom must be > 0 which means it is on "screen" (shifted by offset)
+  function intersectStepAbove(entries) {
+    updateDirection();
+    entries.forEach(function (entry) {
+      var isIntersecting = entry.isIntersecting;
+      var boundingClientRect = entry.boundingClientRect;
+      var target = entry.target;
+
+      // bottom is how far bottom edge of el is from top of viewport
+      var bottom = boundingClientRect.bottom;
+      var height = boundingClientRect.height;
+      var bottomAdjusted = bottom - offsetMargin;
+      var index = getIndex(target);
+      var ss = stepStates[index];
+
+      if (bottomAdjusted >= -ZERO_MOE) {
+        if (isIntersecting && direction === 'down' && ss.state !== 'enter')
+          { notifyStepEnter(target, direction); }
+        else if (!isIntersecting && direction === 'up' && ss.state === 'enter')
+          { notifyStepExit(target, direction); }
+        else if (
+          !isIntersecting &&
+          bottomAdjusted >= height &&
+          direction === 'down' &&
+          ss.state === 'enter'
+        ) {
+          notifyStepExit(target, direction);
+        }
+      }
+    });
+  }
+
+  function intersectStepBelow(entries) {
+    updateDirection();
+    entries.forEach(function (entry) {
+      var isIntersecting = entry.isIntersecting;
+      var boundingClientRect = entry.boundingClientRect;
+      var target = entry.target;
+
+      var bottom = boundingClientRect.bottom;
+      var height = boundingClientRect.height;
+      var bottomAdjusted = bottom - offsetMargin;
+      var index = getIndex(target);
+      var ss = stepStates[index];
+
+      if (
+        bottomAdjusted >= -ZERO_MOE &&
+        bottomAdjusted < height &&
+        isIntersecting &&
+        direction === 'up' &&
+        ss.state !== 'enter'
+      ) {
+        notifyStepEnter(target, direction);
+      } else if (
+        bottomAdjusted <= ZERO_MOE &&
+        !isIntersecting &&
+        direction === 'down' &&
+        ss.state === 'enter'
+      ) {
+        notifyStepExit(target, direction);
+      }
+    });
+  }
+
+  /*
+	if there is a scroll event where a step never intersects (therefore
+	skipping an enter/exit trigger), use this fallback to detect if it is
+	in view
+	*/
+  function intersectViewportAbove(entries) {
+    updateDirection();
+    entries.forEach(function (entry) {
+      var isIntersecting = entry.isIntersecting;
+      var target = entry.target;
+      var index = getIndex(target);
+      var ss = stepStates[index];
+      if (
+        isIntersecting &&
+        direction === 'down' &&
+        ss.state !== 'enter' &&
+        ss.direction !== 'down'
+      ) {
+        notifyStepEnter(target, 'down');
+        notifyStepExit(target, 'down');
+      }
+    });
+  }
+
+  function intersectViewportBelow(entries) {
+    updateDirection();
+    entries.forEach(function (entry) {
+      var isIntersecting = entry.isIntersecting;
+      var target = entry.target;
+      var index = getIndex(target);
+      var ss = stepStates[index];
+      if (
+        isIntersecting &&
+        direction === 'up' &&
+        ss.state !== 'enter' &&
+        ss.direction !== 'up'
+      ) {
+        notifyStepEnter(target, 'up');
+        notifyStepExit(target, 'up');
+      }
+    });
+  }
+
+  function intersectStepProgress(entries) {
+    updateDirection();
+    entries.forEach(
+      function (ref) {
+        var isIntersecting = ref.isIntersecting;
+        var intersectionRatio = ref.intersectionRatio;
+        var boundingClientRect = ref.boundingClientRect;
+        var target = ref.target;
+
+        var bottom = boundingClientRect.bottom;
+        var bottomAdjusted = bottom - offsetMargin;
+
+        if (isIntersecting && bottomAdjusted >= -ZERO_MOE) {
+          notifyStepProgress(target, +intersectionRatio.toFixed(3));
+        }
+      }
+    );
+  }
+
+  function intersectTop(entries) {
+    updateDirection();
+    var ref = entries[0];
+    var isIntersecting = ref.isIntersecting;
+    var boundingClientRect = ref.boundingClientRect;
+    var top = boundingClientRect.top;
+    var bottom = boundingClientRect.bottom;
+
+    if (bottom > -ZERO_MOE) {
+      if (isIntersecting) { notifyContainerEnter(direction); }
+      else if (containerState.state === 'enter') { notifyContainerExit(direction); }
+    }
+  }
+
+  function intersectBottom(entries) {
+    updateDirection();
+    var ref = entries[0];
+    var isIntersecting = ref.isIntersecting;
+    var boundingClientRect = ref.boundingClientRect;
+    var top = boundingClientRect.top;
+
+    if (top < ZERO_MOE) {
+      if (isIntersecting) { notifyContainerEnter(direction); }
+      else if (containerState.state === 'enter') { notifyContainerExit(direction); }
+    }
+  }
+
+  // OBSERVER - CREATION
+
+  function updateTopIO() {
+    if (io.top) { io.top.unobserve(containerEl); }
+
+    var options = {
+      root: null,
+      rootMargin: (vh + "px 0px -" + vh + "px 0px"),
+      threshold: 0
+    };
+
+    io.top = new IntersectionObserver(intersectTop, options);
+    io.top.observe(containerEl);
+  }
+
+  function updateBottomIO() {
+    if (io.bottom) { io.bottom.unobserve(containerEl); }
+    var options = {
+      root: null,
+      rootMargin: ("-" + (bboxGraphic.height) + "px 0px " + (bboxGraphic.height) + "px 0px"),
+      threshold: 0
+    };
+
+    io.bottom = new IntersectionObserver(intersectBottom, options);
+    io.bottom.observe(containerEl);
+  }
+
+  // top edge
+  function updateStepAboveIO() {
+    if (io.stepAbove) { io.stepAbove.forEach(function (d) { return d.disconnect(); }); }
+
+    io.stepAbove = stepEl.map(function (el, i) {
+      var marginTop = stepOffsetHeight[i];
+      var marginBottom = -vh + offsetMargin;
+      var rootMargin = marginTop + "px 0px " + marginBottom + "px 0px";
+
+      var options = {
+        root: null,
+        rootMargin: rootMargin,
+        threshold: 0
+      };
+
+      var obs = new IntersectionObserver(intersectStepAbove, options);
+      obs.observe(el);
+      return obs;
+    });
+  }
+
+  // bottom edge
+  function updateStepBelowIO() {
+    if (io.stepBelow) { io.stepBelow.forEach(function (d) { return d.disconnect(); }); }
+
+    io.stepBelow = stepEl.map(function (el, i) {
+      var marginTop = -offsetMargin;
+      var marginBottom = ph - vh + stepOffsetHeight[i] + offsetMargin;
+      var rootMargin = marginTop + "px 0px " + marginBottom + "px 0px";
+
+      var options = {
+        root: null,
+        rootMargin: rootMargin,
+        threshold: 0
+      };
+
+      var obs = new IntersectionObserver(intersectStepBelow, options);
+      obs.observe(el);
+      return obs;
+    });
+  }
+
+  // jump into viewport
+  function updateViewportAboveIO() {
+    if (io.viewportAbove) { io.viewportAbove.forEach(function (d) { return d.disconnect(); }); }
+    io.viewportAbove = stepEl.map(function (el, i) {
+      var marginTop = stepOffsetTop[i];
+      var marginBottom = -(vh - offsetMargin + stepOffsetHeight[i]);
+      var rootMargin = marginTop + "px 0px " + marginBottom + "px 0px";
+      var options = {
+        root: null,
+        rootMargin: rootMargin,
+        threshold: 0
+      };
+
+      var obs = new IntersectionObserver(intersectViewportAbove, options);
+      obs.observe(el);
+      return obs;
+    });
+  }
+
+  function updateViewportBelowIO() {
+    if (io.viewportBelow) { io.viewportBelow.forEach(function (d) { return d.disconnect(); }); }
+    io.viewportBelow = stepEl.map(function (el, i) {
+      var marginTop = -(offsetMargin + stepOffsetHeight[i]);
+      var marginBottom =
+        ph - stepOffsetTop[i] - stepOffsetHeight[i] - offsetMargin;
+      var rootMargin = marginTop + "px 0px " + marginBottom + "px 0px";
+      var options = {
+        root: null,
+        rootMargin: rootMargin,
+        threshold: 0
+      };
+
+      var obs = new IntersectionObserver(intersectViewportBelow, options);
+      obs.observe(el);
+      return obs;
+    });
+  }
+
+  // progress progress tracker
+  function updateStepProgressIO() {
+    if (io.stepProgress) { io.stepProgress.forEach(function (d) { return d.disconnect(); }); }
+
+    io.stepProgress = stepEl.map(function (el, i) {
+      var marginTop = stepOffsetHeight[i] - offsetMargin;
+      var marginBottom = -vh + offsetMargin;
+      var rootMargin = marginTop + "px 0px " + marginBottom + "px 0px";
+
+      var threshold = createThreshold(stepOffsetHeight[i]);
+      var options = {
+        root: null,
+        rootMargin: rootMargin,
+        threshold: threshold
+      };
+
+      var obs = new IntersectionObserver(intersectStepProgress, options);
+      obs.observe(el);
+      return obs;
+    });
+  }
+
+  function updateIO() {
+    updateViewportAboveIO();
+    updateViewportBelowIO();
+    updateStepAboveIO();
+    updateStepBelowIO();
+
+    if (progressMode) { updateStepProgressIO(); }
+
+    if (containerEl && graphicEl) {
+      updateTopIO();
+      updateBottomIO();
+    }
+  }
+
+  // SETUP FUNCTIONS
+
+  function indexSteps() {
+    stepEl.forEach(function (el, i) { return el.setAttribute('data-scrollama-index', i); });
+  }
+
+  function setupStates() {
+    stepStates = stepEl.map(function () { return ({
+      direction: null,
+      state: null
+    }); });
+
+    containerState = { direction: null, state: null };
+  }
+
+  function addDebug() {
+    if (debugMode) { setup({ id: id, stepEl: stepEl, offsetVal: offsetVal }); }
+  }
+
+  var S = {};
+
+  S.setup = function (ref) {
+    var container = ref.container;
+    var graphic = ref.graphic;
+    var step = ref.step;
+    var offset = ref.offset; if ( offset === void 0 ) { offset = 0.5; }
+    var progress = ref.progress; if ( progress === void 0 ) { progress = false; }
+    var threshold = ref.threshold; if ( threshold === void 0 ) { threshold = 4; }
+    var debug = ref.debug; if ( debug === void 0 ) { debug = false; }
+    var order = ref.order; if ( order === void 0 ) { order = true; }
+    var once = ref.once; if ( once === void 0 ) { once = false; }
+
+    id = generateId();
+    // elements
+    stepEl = selectAll(step);
+    containerEl = container ? select(container) : null;
+    graphicEl = graphic ? select(graphic) : null;
+
+    // error if no step selected
+    if (!stepEl.length) {
+      console.error('scrollama error: no step elements');
+      return S;
+    }
+
+    // options
+    debugMode = debug;
+    progressMode = progress;
+    preserveOrder = order;
+    triggerOnce = once;
+
+    S.offsetTrigger(offset);
+    progressThreshold = Math.max(1, +threshold);
+
+    isReady = true;
+
+    // customize
+    addDebug();
+    indexSteps();
+    setupStates();
+    handleResize();
+    handleEnable(true);
+    return S;
+  };
+
+  S.resize = function () {
+    handleResize();
+    return S;
+  };
+
+  S.enable = function () {
+    handleEnable(true);
+    return S;
+  };
+
+  S.disable = function () {
+    handleEnable(false);
+    return S;
+  };
+
+  S.destroy = function () {
+    handleEnable(false);
+    Object.keys(callback).forEach(function (c) { return (callback[c] = null); });
+    Object.keys(io).forEach(function (i) { return (io[i] = null); });
+  };
+
+  S.offsetTrigger = function(x) {
+    if (x && !isNaN(x)) {
+      offsetVal = Math.min(Math.max(0, x), 1);
+      return S;
+    }
+    return offsetVal;
+  };
+
+  S.onStepEnter = function (cb) {
+    callback.stepEnter = cb;
+    return S;
+  };
+
+  S.onStepExit = function (cb) {
+    callback.stepExit = cb;
+    return S;
+  };
+
+  S.onStepProgress = function (cb) {
+    callback.stepProgress = cb;
+    return S;
+  };
+
+  S.onContainerEnter = function (cb) {
+    callback.containerEnter = cb;
+    return S;
+  };
+
+  S.onContainerExit = function (cb) {
+    callback.containerExit = cb;
+    return S;
+  };
+
+  return S;
+}
+
+return scrollama;
+
+})));
+});
+
+function getInternetExplorerVersion() {
+	var ua = window.navigator.userAgent;
+
+	var msie = ua.indexOf('MSIE ');
+	if (msie > 0) {
+		// IE 10 or older => return version number
+		return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+	}
+
+	var trident = ua.indexOf('Trident/');
+	if (trident > 0) {
+		// IE 11 => return version number
+		var rv = ua.indexOf('rv:');
+		return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+	}
+
+	var edge = ua.indexOf('Edge/');
+	if (edge > 0) {
+		// Edge (IE 12+) => return version number
+		return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+	}
+
+	// other browser
+	return -1;
+}
+
+var isIE = void 0;
+
+function initCompat() {
+	if (!initCompat.init) {
+		initCompat.init = true;
+		isIE = getInternetExplorerVersion() !== -1;
+	}
+}
+
+var ResizeObserver = { render: function render() {
+		var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "resize-observer", attrs: { "tabindex": "-1" } });
+	}, staticRenderFns: [], _scopeId: 'data-v-b329ee4c',
+	name: 'resize-observer',
+
+	methods: {
+		compareAndNotify: function compareAndNotify() {
+			if (this._w !== this.$el.offsetWidth || this._h !== this.$el.offsetHeight) {
+				this._w = this.$el.offsetWidth;
+				this._h = this.$el.offsetHeight;
+				this.$emit('notify');
+			}
+		},
+		addResizeHandlers: function addResizeHandlers() {
+			this._resizeObject.contentDocument.defaultView.addEventListener('resize', this.compareAndNotify);
+			this.compareAndNotify();
+		},
+		removeResizeHandlers: function removeResizeHandlers() {
+			if (this._resizeObject && this._resizeObject.onload) {
+				if (!isIE && this._resizeObject.contentDocument) {
+					this._resizeObject.contentDocument.defaultView.removeEventListener('resize', this.compareAndNotify);
+				}
+				delete this._resizeObject.onload;
+			}
+		}
+	},
+
+	mounted: function mounted() {
+		var _this = this;
+
+		initCompat();
+		this.$nextTick(function () {
+			_this._w = _this.$el.offsetWidth;
+			_this._h = _this.$el.offsetHeight;
+		});
+		var object = document.createElement('object');
+		this._resizeObject = object;
+		object.setAttribute('aria-hidden', 'true');
+		object.setAttribute('tabindex', -1);
+		object.onload = this.addResizeHandlers;
+		object.type = 'text/html';
+		if (isIE) {
+			this.$el.appendChild(object);
+		}
+		object.data = 'about:blank';
+		if (!isIE) {
+			this.$el.appendChild(object);
+		}
+	},
+	beforeDestroy: function beforeDestroy() {
+		this.removeResizeHandlers();
+	}
+};
+
+// Install the components
+function install(Vue) {
+	Vue.component('resize-observer', ResizeObserver);
+	Vue.component('ResizeObserver', ResizeObserver);
+}
+
+// Plugin
+var plugin = {
+	// eslint-disable-next-line no-undef
+	version: "0.4.5",
+	install: install
+};
+
+// Auto-install
+var GlobalVue = null;
+if (typeof window !== 'undefined') {
+	GlobalVue = window.Vue;
+} else if (typeof global !== 'undefined') {
+	GlobalVue = global.Vue;
+}
+if (GlobalVue) {
+	GlobalVue.use(plugin);
+}
+
+var stickyfill = createCommonjsModule(function (module) {
+(function(window, document) {
+    
+    /*
+     * 1. Check if the browser supports `position: sticky` natively or is too old to run the polyfill.
+     *    If either of these is the case set `seppuku` flag. It will be checked later to disable key features
+     *    of the polyfill, but the API will remain functional to avoid breaking things.
+     */
+    
+    var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) { descriptor.writable = true; } Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) { defineProperties(Constructor.prototype, protoProps); } if (staticProps) { defineProperties(Constructor, staticProps); } return Constructor; }; }();
+    
+    function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+    
+    var seppuku = false;
+    
+    var isWindowDefined = typeof window !== 'undefined';
+    
+    // The polyfill can’t function properly without `window` or `window.getComputedStyle`.
+    if (!isWindowDefined || !window.getComputedStyle) { seppuku = true; }
+    // Dont’t get in a way if the browser supports `position: sticky` natively.
+    else {
+            (function () {
+                var testNode = document.createElement('div');
+    
+                if (['', '-webkit-', '-moz-', '-ms-'].some(function (prefix) {
+                    try {
+                        testNode.style.position = prefix + 'sticky';
+                    } catch (e) {}
+    
+                    return testNode.style.position != '';
+                })) { seppuku = true; }
+            })();
+        }
+    
+    /*
+     * 2. “Global” vars used across the polyfill
+     */
+    var isInitialized = false;
+    
+    // Check if Shadow Root constructor exists to make further checks simpler
+    var shadowRootExists = typeof ShadowRoot !== 'undefined';
+    
+    // Last saved scroll position
+    var scroll = {
+        top: null,
+        left: null
+    };
+    
+    // Array of created Sticky instances
+    var stickies = [];
+    
+    /*
+     * 3. Utility functions
+     */
+    function extend(targetObj, sourceObject) {
+        for (var key in sourceObject) {
+            if (sourceObject.hasOwnProperty(key)) {
+                targetObj[key] = sourceObject[key];
+            }
+        }
+    }
+    
+    function parseNumeric(val) {
+        return parseFloat(val) || 0;
+    }
+    
+    function getDocOffsetTop(node) {
+        var docOffsetTop = 0;
+    
+        while (node) {
+            docOffsetTop += node.offsetTop;
+            node = node.offsetParent;
+        }
+    
+        return docOffsetTop;
+    }
+    
+    /*
+     * 4. Sticky class
+     */
+    
+    var Sticky = function () {
+        function Sticky(node) {
+            _classCallCheck(this, Sticky);
+    
+            if (!(node instanceof HTMLElement)) { throw new Error('First argument must be HTMLElement'); }
+            if (stickies.some(function (sticky) {
+                return sticky._node === node;
+            })) { throw new Error('Stickyfill is already applied to this node'); }
+    
+            this._node = node;
+            this._stickyMode = null;
+            this._active = false;
+    
+            stickies.push(this);
+    
+            this.refresh();
+        }
+    
+        _createClass(Sticky, [{
+            key: 'refresh',
+            value: function refresh() {
+                if (seppuku || this._removed) { return; }
+                if (this._active) { this._deactivate(); }
+    
+                var node = this._node;
+    
+                /*
+                 * 1. Save node computed props
+                 */
+                var nodeComputedStyle = getComputedStyle(node);
+                var nodeComputedProps = {
+                    position: nodeComputedStyle.position,
+                    top: nodeComputedStyle.top,
+                    display: nodeComputedStyle.display,
+                    marginTop: nodeComputedStyle.marginTop,
+                    marginBottom: nodeComputedStyle.marginBottom,
+                    marginLeft: nodeComputedStyle.marginLeft,
+                    marginRight: nodeComputedStyle.marginRight,
+                    cssFloat: nodeComputedStyle.cssFloat
+                };
+    
+                /*
+                 * 2. Check if the node can be activated
+                 */
+                if (isNaN(parseFloat(nodeComputedProps.top)) || nodeComputedProps.display == 'table-cell' || nodeComputedProps.display == 'none') { return; }
+    
+                this._active = true;
+    
+                /*
+                 * 3. Check if the current node position is `sticky`. If it is, it means that the browser supports sticky positioning,
+                 *    but the polyfill was force-enabled. We set the node’s position to `static` before continuing, so that the node
+                 *    is in it’s initial position when we gather its params.
+                 */
+                var originalPosition = node.style.position;
+                if (nodeComputedStyle.position == 'sticky' || nodeComputedStyle.position == '-webkit-sticky') { node.style.position = 'static'; }
+    
+                /*
+                 * 4. Get necessary node parameters
+                 */
+                var referenceNode = node.parentNode;
+                var parentNode = shadowRootExists && referenceNode instanceof ShadowRoot ? referenceNode.host : referenceNode;
+                var nodeWinOffset = node.getBoundingClientRect();
+                var parentWinOffset = parentNode.getBoundingClientRect();
+                var parentComputedStyle = getComputedStyle(parentNode);
+    
+                this._parent = {
+                    node: parentNode,
+                    styles: {
+                        position: parentNode.style.position
+                    },
+                    offsetHeight: parentNode.offsetHeight
+                };
+                this._offsetToWindow = {
+                    left: nodeWinOffset.left,
+                    right: document.documentElement.clientWidth - nodeWinOffset.right
+                };
+                this._offsetToParent = {
+                    top: nodeWinOffset.top - parentWinOffset.top - parseNumeric(parentComputedStyle.borderTopWidth),
+                    left: nodeWinOffset.left - parentWinOffset.left - parseNumeric(parentComputedStyle.borderLeftWidth),
+                    right: -nodeWinOffset.right + parentWinOffset.right - parseNumeric(parentComputedStyle.borderRightWidth)
+                };
+                this._styles = {
+                    position: originalPosition,
+                    top: node.style.top,
+                    bottom: node.style.bottom,
+                    left: node.style.left,
+                    right: node.style.right,
+                    width: node.style.width,
+                    marginTop: node.style.marginTop,
+                    marginLeft: node.style.marginLeft,
+                    marginRight: node.style.marginRight
+                };
+    
+                var nodeTopValue = parseNumeric(nodeComputedProps.top);
+                this._limits = {
+                    start: nodeWinOffset.top + window.pageYOffset - nodeTopValue,
+                    end: parentWinOffset.top + window.pageYOffset + parentNode.offsetHeight - parseNumeric(parentComputedStyle.borderBottomWidth) - node.offsetHeight - nodeTopValue - parseNumeric(nodeComputedProps.marginBottom)
+                };
+    
+                /*
+                 * 5. Ensure that the node will be positioned relatively to the parent node
+                 */
+                var parentPosition = parentComputedStyle.position;
+    
+                if (parentPosition != 'absolute' && parentPosition != 'relative') {
+                    parentNode.style.position = 'relative';
+                }
+    
+                /*
+                 * 6. Recalc node position.
+                 *    It’s important to do this before clone injection to avoid scrolling bug in Chrome.
+                 */
+                this._recalcPosition();
+    
+                /*
+                 * 7. Create a clone
+                 */
+                var clone = this._clone = {};
+                clone.node = document.createElement('div');
+    
+                // Apply styles to the clone
+                extend(clone.node.style, {
+                    width: nodeWinOffset.right - nodeWinOffset.left + 'px',
+                    height: nodeWinOffset.bottom - nodeWinOffset.top + 'px',
+                    marginTop: nodeComputedProps.marginTop,
+                    marginBottom: nodeComputedProps.marginBottom,
+                    marginLeft: nodeComputedProps.marginLeft,
+                    marginRight: nodeComputedProps.marginRight,
+                    cssFloat: nodeComputedProps.cssFloat,
+                    padding: 0,
+                    border: 0,
+                    borderSpacing: 0,
+                    fontSize: '1em',
+                    position: 'static'
+                });
+    
+                referenceNode.insertBefore(clone.node, node);
+                clone.docOffsetTop = getDocOffsetTop(clone.node);
+            }
+        }, {
+            key: '_recalcPosition',
+            value: function _recalcPosition() {
+                if (!this._active || this._removed) { return; }
+    
+                var stickyMode = scroll.top <= this._limits.start ? 'start' : scroll.top >= this._limits.end ? 'end' : 'middle';
+    
+                if (this._stickyMode == stickyMode) { return; }
+    
+                switch (stickyMode) {
+                    case 'start':
+                        extend(this._node.style, {
+                            position: 'absolute',
+                            left: this._offsetToParent.left + 'px',
+                            right: this._offsetToParent.right + 'px',
+                            top: this._offsetToParent.top + 'px',
+                            bottom: 'auto',
+                            width: 'auto',
+                            marginLeft: 0,
+                            marginRight: 0,
+                            marginTop: 0
+                        });
+                        break;
+    
+                    case 'middle':
+                        extend(this._node.style, {
+                            position: 'fixed',
+                            left: this._offsetToWindow.left + 'px',
+                            right: this._offsetToWindow.right + 'px',
+                            top: this._styles.top,
+                            bottom: 'auto',
+                            width: 'auto',
+                            marginLeft: 0,
+                            marginRight: 0,
+                            marginTop: 0
+                        });
+                        break;
+    
+                    case 'end':
+                        extend(this._node.style, {
+                            position: 'absolute',
+                            left: this._offsetToParent.left + 'px',
+                            right: this._offsetToParent.right + 'px',
+                            top: 'auto',
+                            bottom: 0,
+                            width: 'auto',
+                            marginLeft: 0,
+                            marginRight: 0
+                        });
+                        break;
+                }
+    
+                this._stickyMode = stickyMode;
+            }
+        }, {
+            key: '_fastCheck',
+            value: function _fastCheck() {
+                if (!this._active || this._removed) { return; }
+    
+                if (Math.abs(getDocOffsetTop(this._clone.node) - this._clone.docOffsetTop) > 1 || Math.abs(this._parent.node.offsetHeight - this._parent.offsetHeight) > 1) { this.refresh(); }
+            }
+        }, {
+            key: '_deactivate',
+            value: function _deactivate() {
+                var _this = this;
+    
+                if (!this._active || this._removed) { return; }
+    
+                this._clone.node.parentNode.removeChild(this._clone.node);
+                delete this._clone;
+    
+                extend(this._node.style, this._styles);
+                delete this._styles;
+    
+                // Check whether element’s parent node is used by other stickies.
+                // If not, restore parent node’s styles.
+                if (!stickies.some(function (sticky) {
+                    return sticky !== _this && sticky._parent && sticky._parent.node === _this._parent.node;
+                })) {
+                    extend(this._parent.node.style, this._parent.styles);
+                }
+                delete this._parent;
+    
+                this._stickyMode = null;
+                this._active = false;
+    
+                delete this._offsetToWindow;
+                delete this._offsetToParent;
+                delete this._limits;
+            }
+        }, {
+            key: 'remove',
+            value: function remove() {
+                var _this2 = this;
+    
+                this._deactivate();
+    
+                stickies.some(function (sticky, index) {
+                    if (sticky._node === _this2._node) {
+                        stickies.splice(index, 1);
+                        return true;
+                    }
+                });
+    
+                this._removed = true;
+            }
+        }]);
+    
+        return Sticky;
+    }();
+    
+    /*
+     * 5. Stickyfill API
+     */
+    
+    
+    var Stickyfill = {
+        stickies: stickies,
+        Sticky: Sticky,
+    
+        forceSticky: function forceSticky() {
+            seppuku = false;
+            init();
+    
+            this.refreshAll();
+        },
+        addOne: function addOne(node) {
+            // Check whether it’s a node
+            if (!(node instanceof HTMLElement)) {
+                // Maybe it’s a node list of some sort?
+                // Take first node from the list then
+                if (node.length && node[0]) { node = node[0]; }else { return; }
+            }
+    
+            // Check if Stickyfill is already applied to the node
+            // and return existing sticky
+            for (var i = 0; i < stickies.length; i++) {
+                if (stickies[i]._node === node) { return stickies[i]; }
+            }
+    
+            // Create and return new sticky
+            return new Sticky(node);
+        },
+        add: function add(nodeList) {
+            // If it’s a node make an array of one node
+            if (nodeList instanceof HTMLElement) { nodeList = [nodeList]; }
+            // Check if the argument is an iterable of some sort
+            if (!nodeList.length) { return; }
+    
+            // Add every element as a sticky and return an array of created Sticky instances
+            var addedStickies = [];
+    
+            var _loop = function _loop(i) {
+                var node = nodeList[i];
+    
+                // If it’s not an HTMLElement – create an empty element to preserve 1-to-1
+                // correlation with input list
+                if (!(node instanceof HTMLElement)) {
+                    addedStickies.push(void 0);
+                    return 'continue';
+                }
+    
+                // If Stickyfill is already applied to the node
+                // add existing sticky
+                if (stickies.some(function (sticky) {
+                    if (sticky._node === node) {
+                        addedStickies.push(sticky);
+                        return true;
+                    }
+                })) { return 'continue'; }
+    
+                // Create and add new sticky
+                addedStickies.push(new Sticky(node));
+            };
+    
+            for (var i = 0; i < nodeList.length; i++) {
+                var _ret2 = _loop(i);
+    
+                if (_ret2 === 'continue') { continue; }
+            }
+    
+            return addedStickies;
+        },
+        refreshAll: function refreshAll() {
+            stickies.forEach(function (sticky) {
+                return sticky.refresh();
+            });
+        },
+        removeOne: function removeOne(node) {
+            // Check whether it’s a node
+            if (!(node instanceof HTMLElement)) {
+                // Maybe it’s a node list of some sort?
+                // Take first node from the list then
+                if (node.length && node[0]) { node = node[0]; }else { return; }
+            }
+    
+            // Remove the stickies bound to the nodes in the list
+            stickies.some(function (sticky) {
+                if (sticky._node === node) {
+                    sticky.remove();
+                    return true;
+                }
+            });
+        },
+        remove: function remove(nodeList) {
+            // If it’s a node make an array of one node
+            if (nodeList instanceof HTMLElement) { nodeList = [nodeList]; }
+            // Check if the argument is an iterable of some sort
+            if (!nodeList.length) { return; }
+    
+            // Remove the stickies bound to the nodes in the list
+    
+            var _loop2 = function _loop2(i) {
+                var node = nodeList[i];
+    
+                stickies.some(function (sticky) {
+                    if (sticky._node === node) {
+                        sticky.remove();
+                        return true;
+                    }
+                });
+            };
+    
+            for (var i = 0; i < nodeList.length; i++) {
+                _loop2(i);
+            }
+        },
+        removeAll: function removeAll() {
+            while (stickies.length) {
+                stickies[0].remove();
+            }
+        }
+    };
+    
+    /*
+     * 6. Setup events (unless the polyfill was disabled)
+     */
+    function init() {
+        if (isInitialized) {
+            return;
+        }
+    
+        isInitialized = true;
+    
+        // Watch for scroll position changes and trigger recalc/refresh if needed
+        function checkScroll() {
+            if (window.pageXOffset != scroll.left) {
+                scroll.top = window.pageYOffset;
+                scroll.left = window.pageXOffset;
+    
+                Stickyfill.refreshAll();
+            } else if (window.pageYOffset != scroll.top) {
+                scroll.top = window.pageYOffset;
+                scroll.left = window.pageXOffset;
+    
+                // recalc position for all stickies
+                stickies.forEach(function (sticky) {
+                    return sticky._recalcPosition();
+                });
+            }
+        }
+    
+        checkScroll();
+        window.addEventListener('scroll', checkScroll);
+    
+        // Watch for window resizes and device orientation changes and trigger refresh
+        window.addEventListener('resize', Stickyfill.refreshAll);
+        window.addEventListener('orientationchange', Stickyfill.refreshAll);
+    
+        //Fast dirty check for layout changes every 500ms
+        var fastCheckTimer = void 0;
+    
+        function startFastCheckTimer() {
+            fastCheckTimer = setInterval(function () {
+                stickies.forEach(function (sticky) {
+                    return sticky._fastCheck();
+                });
+            }, 500);
+        }
+    
+        function stopFastCheckTimer() {
+            clearInterval(fastCheckTimer);
+        }
+    
+        var docHiddenKey = void 0;
+        var visibilityChangeEventName = void 0;
+    
+        if ('hidden' in document) {
+            docHiddenKey = 'hidden';
+            visibilityChangeEventName = 'visibilitychange';
+        } else if ('webkitHidden' in document) {
+            docHiddenKey = 'webkitHidden';
+            visibilityChangeEventName = 'webkitvisibilitychange';
+        }
+    
+        if (visibilityChangeEventName) {
+            if (!document[docHiddenKey]) { startFastCheckTimer(); }
+    
+            document.addEventListener(visibilityChangeEventName, function () {
+                if (document[docHiddenKey]) {
+                    stopFastCheckTimer();
+                } else {
+                    startFastCheckTimer();
+                }
+            });
+        } else { startFastCheckTimer(); }
+    }
+    
+    if (!seppuku) { init(); }
+    
+    /*
+     * 7. Expose Stickyfill
+     */
+    if (module.exports) {
+        module.exports = Stickyfill;
+    } else if (isWindowDefined) {
+        window.Stickyfill = Stickyfill;
+    }
+    
+})(window, document);
+});
+
+//
+
+
+var script = {
+  name: 'Scrollama',
+  components: {
+    ResizeObserver: ResizeObserver
+  },
+  props: {
+    id: {
+      type: String,
+      validator: function(value) {
+        return !/\s/.test(value);
+      },
+      default: function () {
+        return Math.random().toString(36).substr(2, 9)
+      }
+    }
+  },
+  mounted: function mounted () {
+    // polyfill for CSS position sticky
+    stickyfill.add(this.$refs['scrollama-graphic']);
+
+    this.scroller = scrollama();
+
+    this.setup();
+  },
+  beforeDestroy: function beforeDestroy() {
+    this.scroller.destroy();
+  },
+  computed: {
+    opts: function opts() {
+      return Object.assign({}, this.$attrs, {
+        step: ("#scrollama-steps-" + (this.id) + ">div"),
+        container: ("#scrollama-container-" + (this.id)),
+        graphic: ("#scrollama-graphic-" + (this.id)),
+      })
+    }
+  },
+  methods: {
+    setup: function setup() {
+      var this$1 = this;
+
+      this.scroller.destroy(); 
+      
+      this.scroller.setup(this.opts);
+
+      if(this.$listeners['step-progress']) {
+        this.scroller.onStepProgress(function (resp) {
+          this$1.$emit('step-progress', resp);
+        });
+      }
+
+      if(this.$listeners['step-enter']) {
+        this.scroller.onStepEnter(function (resp) {
+          this$1.$emit('step-enter', resp);
+        });
+      }
+
+      if(this.$listeners['step-exit']) {
+        this.scroller.onStepExit(function (resp) {
+          this$1.$emit('step-exit', resp);
+        });
+      }
+
+      if(this.$listeners['container-enter']) {
+        this.scroller.onContainerEnter(function (resp) {
+          this$1.$emit('container-enter', resp);
+        });
+      }
+
+      if(this.$listeners['container-exit']) {
+        this.scroller.onContainerExit(function (resp) {
+          this$1.$emit('container-exit', resp);
+        });
+      }
+
+      this.scroller.resize();
+    },
+    handleResize: function handleResize () {
+      this.scroller.resize();
+    }
+  }
+};
+
+function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier
+/* server only */
+, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
+  if (typeof shadowMode !== 'boolean') {
+    createInjectorSSR = createInjector;
+    createInjector = shadowMode;
+    shadowMode = false;
+  } // Vue.extend constructor export interop.
+
+
+  var options = typeof script === 'function' ? script.options : script; // render functions
+
+  if (template && template.render) {
+    options.render = template.render;
+    options.staticRenderFns = template.staticRenderFns;
+    options._compiled = true; // functional template
+
+    if (isFunctionalTemplate) {
+      options.functional = true;
+    }
+  } // scopedId
+
+
+  if (scopeId) {
+    options._scopeId = scopeId;
+  }
+
+  var hook;
+
+  if (moduleIdentifier) {
+    // server build
+    hook = function hook(context) {
+      // 2.3 injection
+      context = context || // cached call
+      this.$vnode && this.$vnode.ssrContext || // stateful
+      this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext; // functional
+      // 2.2 with runInNewContext: true
+
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__;
+      } // inject component styles
+
+
+      if (style) {
+        style.call(this, createInjectorSSR(context));
+      } // register component module identifier for async chunk inference
+
+
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier);
+      }
+    }; // used by ssr in case component is cached and beforeCreate
+    // never gets called
+
+
+    options._ssrRegister = hook;
+  } else if (style) {
+    hook = shadowMode ? function () {
+      style.call(this, createInjectorShadow(this.$root.$options.shadowRoot));
+    } : function (context) {
+      style.call(this, createInjector(context));
+    };
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // register for functional component in vue file
+      var originalRender = options.render;
+
+      options.render = function renderWithStyleInjection(h, context) {
+        hook.call(context);
+        return originalRender(h, context);
+      };
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate;
+      options.beforeCreate = existing ? [].concat(existing, hook) : [hook];
+    }
+  }
+
+  return script;
+}
+
+var normalizeComponent_1 = normalizeComponent;
+
+/* script */
+var __vue_script__ = script;
+/* template */
+var __vue_render__ = function() {
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
+  return _c(
+    "div",
+    {
+      staticClass: "scrollama-container",
+      class: { "with-graphic": _vm.$slots.graphic },
+      attrs: { id: "scrollama-container-" + _vm.id }
+    },
+    [
+      _c(
+        "div",
+        {
+          ref: "scrollama-graphic",
+          staticClass: "scrollama-graphic",
+          attrs: { id: "scrollama-graphic-" + _vm.id }
+        },
+        [_vm._t("graphic")],
+        2
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "scrollama-steps",
+          attrs: { id: "scrollama-steps-" + _vm.id }
+        },
+        [_vm._t("default")],
+        2
+      ),
+      _vm._v(" "),
+      _c("resize-observer", { on: { notify: _vm.handleResize } })
+    ],
+    1
+  )
+};
+var __vue_staticRenderFns__ = [];
+__vue_render__._withStripped = true;
+
+  /* style */
+  var __vue_inject_styles__ = undefined;
+  /* scoped */
+  var __vue_scope_id__ = undefined;
+  /* module identifier */
+  var __vue_module_identifier__ = undefined;
+  /* functional template */
+  var __vue_is_functional_template__ = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+
+  
+  var component = normalizeComponent_1(
+    { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
+    __vue_inject_styles__,
+    __vue_script__,
+    __vue_scope_id__,
+    __vue_is_functional_template__,
+    __vue_module_identifier__,
+    undefined,
+    undefined
+  );
+
+// Import vue component
+
+// install function executed by Vue.use()
+function install$1(Vue) {
+  if (install$1.installed) { return; }
+  install$1.installed = true;
+  Vue.component('Scrollama', component);
+}
+
+// Create module definition for Vue.use()
+var plugin$1 = {
+  install: install$1,
+};
+
+// To auto-install when vue is found
+/* global window global */
+var GlobalVue$1 = null;
+if (typeof window !== 'undefined') {
+  GlobalVue$1 = window.Vue;
+} else if (typeof global !== 'undefined') {
+  GlobalVue$1 = global.Vue;
+}
+if (GlobalVue$1) {
+  GlobalVue$1.use(plugin$1);
+}
+
+// It's possible to expose named exports when writing components that can
+// also be used as directives, etc. - eg. import { RollupDemoDirective } from 'rollup-demo';
+// export const RollupDemoDirective = component;
+
+/* harmony default export */ __webpack_exports__["default"] = (component);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -51808,7 +55162,6 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue").default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -51825,6 +55178,9 @@ var app = new Vue({
   }
 });
 /* harmony default export */ __webpack_exports__["default"] = (app);
+$(document).ready(function () {
+  $(this).scrollTop(0);
+});
 
 /***/ }),
 
@@ -51883,75 +55239,6 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
-
-/***/ }),
-
-/***/ "./resources/js/components/ExampleComponent.vue":
-/*!******************************************************!*\
-  !*** ./resources/js/components/ExampleComponent.vue ***!
-  \******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ExampleComponent.vue?vue&type=template&id=299e239e& */ "./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&");
-/* harmony import */ var _ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ExampleComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/ExampleComponent.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************!*\
-  !*** ./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ExampleComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&":
-/*!*************************************************************************************!*\
-  !*** ./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e& ***!
-  \*************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./ExampleComponent.vue?vue&type=template&id=299e239e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
 
 /***/ }),
 
@@ -52071,7 +55358,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Cover_vue_vue_type_template_id_212072b0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Cover.vue?vue&type=template&id=212072b0& */ "./resources/js/views/Cover.vue?vue&type=template&id=212072b0&");
 /* harmony import */ var _Cover_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Cover.vue?vue&type=script&lang=js& */ "./resources/js/views/Cover.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var vue_scrollama_dist_vue_scrollama_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-scrollama/dist/vue-scrollama.css?vue&type=style&index=0&lang=css& */ "./node_modules/vue-scrollama/dist/vue-scrollama.css?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -52079,7 +55368,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _Cover_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Cover_vue_vue_type_template_id_212072b0___WEBPACK_IMPORTED_MODULE_0__["render"],
   _Cover_vue_vue_type_template_id_212072b0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
