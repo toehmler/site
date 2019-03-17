@@ -26,7 +26,7 @@
                   <div id="about"></div>
               </div>
               <div class="step" data-step-no="2">
-                  <p class="h5 fw-500 mb-3">My name is Trey. I'm 20 years old and a web designer, developer and college student. I’m currently studying computer science and math at Middlebury College.</p>
+                  <p class="h5 fw-500 mb-3">My name is Trey. I'm a 20 year old web designer, developer and college student. I’m currently studying computer science and math at Middlebury College.</p>
                   <p class="fw-300">At eleven years old I began teaching myself to program. Starting with simple websites, I worked my way up to building full-stack web apps, iPhone apps, and developing for motion sensing technology. Nowadays, I have a wide range of development-related interests, though I primarily focus my efforts on creating immersive, responsive and memorable websites.</p> 
                   <p class="h4 fw-500">Technical Experience</p>
                   <p class="fw-300">I have a passion for problem solving and figuring things out. I try to learn as many new skills and technologies as possible so that I can deliver work that’s in touch with current digital design trends while performing well.  I’ve been around a computer my entire life, and been programming them for the last eight years. Recently, I’ve turned my focus  towards full-stack web development. Below I’ve listed the tools and languages I feel most comfortable using.</p>
