@@ -21,7 +21,7 @@
                   -->
               </div>
               <div class="step" data-step-no="1">
-                  <p class="text-center h1 fw-500 bounce-in-top">Hi.
+                  <p class="text-center h1 fw-500 bounce-in-top">Hi.</p>
                   <p class="text-center fw-300 text-focus-in">I build websites.</p>
                   <div id="about"></div>
               </div>
