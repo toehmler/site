@@ -134,12 +134,12 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
 }
 .hidden-mobile {
     transition:all 200ms ease-in-out;
+    pointer-events:none;
     @include media-breakpoint-up(md) {
         opacity:1;
         pointer-events:all;
     }
     opacity:0;
-    pointer-events:none !important;
 }
 
 #menu-toggle {

@@ -11225,8 +11225,8 @@ h6,
 
 .hidden-mobile {
   transition: all 200ms ease-in-out;
+  pointer-events: none;
   opacity: 0;
-  pointer-events: none !important;
 }
 
 @media (min-width: 768px) {
