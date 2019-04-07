@@ -13,7 +13,14 @@
                   <div id="divider" class="tracking-in-expand"></div>
                   <a href="#about" v-on:click="closeMobileMenu" class="fw-500 mt-3 ml-2 tracking-in-expand d-inline">about</a>
                   <a href="#projects" v-on:click="closeMobileMenu" class="fw-500 ml-2 tracking-in-expand">work</a>
+                  <a href="/res2019.pdf" target="_blank" class="fw-500 ml-2 tracking-in-expand">resume</a>
                   <a href="#contact" v-on:click="closeMobileMenu" class="fw-500 ml-2 tracking-in-expand">contact</a>
+                  <div class="d-flex flex-row ml-2 tracking-in-expand mt-2">
+                      <a href="tel:203-722-1497"><i class="fas fa-phone nav-icon"></i></a>
+                      <a href="https://github.com/toehmler" target="__blank"><i class="fab fa-github nav-icon"></i></a>
+                      <a href="mailto:treyoehmler@gmail.com"><i class="far fa-envelope nav-icon"></i></a>
+                  </div>
+
                   <!--
                   <i class="fas fa-phone"></i>
                   <i class="far fa-envelope"></i>
@@ -21,15 +28,22 @@
                   -->
               </div>
               <div class="step" data-step-no="1">
-                  <p class="text-center h1 fw-500 bounce-in-top">Hi.</p>
-                  <p class="text-center fw-300 text-focus-in">I build websites.</p>
+                  <p class="text-center h4 fw-500 bounce-in-top">I'm a developer.</p>
+                  <p class="text-center px-4 fw-300 text-focus-in">Scroll down to learn a bit about me.</p>
                   <div id="about"></div>
               </div>
               <div class="step" data-step-no="2">
+                  <p class="h5 fw-500 mb-3">I’m highly driven and I enjoy work that challenges me to learn new ways of thinking, new skills and new technologies.</p>
+                  <p class="fw-300">I’ve been programming since I was 11 years old and started by teaching myself Objective-C and how to make iPhone apps. I’ve had a passion for developing ever since and have a wide range of computer-related interests. I’ve received <a href="http://nchscourant.com/trey-oehmler-a-self-taught-technology-mastermind/" target="_blank"><u>significant recognition</u></a> for <a href="https://www.newcanaannewsonline.com/news/article/Not-your-father-s-science-fair-Tech-Night-2011-1016715.php" target="_blank"><u>my work</u></a>, including in 2014 by Complex Magazine, which listed me as one of the <a class="fw-400" target="_blank" href="https://www.complex.com/pop-culture/2013/01/the-10-youngest-tech-prodigies-right-now/trey-oehmler"><u>top 10 youngest tech prodigies</u></a> in the world. At the moment I am a junior at <a href="https://athletics.middlebury.edu/sports/mswimdive/2018-19/bios/oehmler_trey_e1m3"><u>Middlebury College</u></a> studying Computer Science and Mathematics. </p>
+                  <p class="fw-300">I started building full-stack web applications before I finished seventh grade. With over eight years of programming experience I have developed the ability to quickly learn new languages and technologies at a pace that allows me stay on top of current design trends while prioritizing performance and compatibility. Through growing up during the dawn of the digital and smartphone era, I have been using and developing for the web for the majority of my life and truly believe in the power of the internet and technology to have a lasting impact on its users. Below you’ll find a list of the languages, frameworks and tools and I find myself using most frequently.</p> 
+
+
+                  <!--
                   <p class="h5 fw-500 mb-3">My name is Trey. I'm a 20 year old web designer, developer and college student. I’m currently studying computer science and math at Middlebury College.</p>
                   <p class="fw-300">I starting teach myself to program when I was 11. Starting with simple websites, I worked my way up to building full-stack web apps, iPhone apps, and developing for motion sensing technology. Nowadays, I have a wide range of development-related interests, though I primarily focus my efforts on creating immersive, responsive and memorable websites.</p> 
                   <p class="h4 fw-500">Technical Experience</p>
                   <p class="fw-300">I have a passion for problem solving and figuring things out. I try to learn as many new skills and technologies as possible so that I can deliver work that’s in touch with current digital design trends while prioritizing performance. Recently, I’ve turned my focus  towards full-stack web development. Below I’ve listed the tools and languages I feel most comfortable using.</p>
+                  -->
                   <p>
                       <span class="badge badge-pill badge-dark">HTML / CSS</span>
                       <span class="badge badge-pill badge-dark">Sass</span>
@@ -48,24 +62,24 @@
                   </p>
                   <div id="projects"></div>
               </div>
-              <!-- TODO: ADD TECHNICAL SKILLS -->
               <div class="step" data-step-no="3">
                   <p class="h2 fw-500">Recent Projects</p>
-                  <p class="fw-300">I can handle projects from scratch or projects for established brands with preexisting visuals and aesthetics. Below is a collection of some of my web development work and some of the projects I'm currently involved in. </p>
+                  <p class="fw-300">Since I started freelancing I’ve done work for a wide variety of different business, organizations and non-profits. I can handle projects from scratch or projects for brands with pre-existing visuals and aesthetics. I’ve included a list of my some of my favorite and most recent projects, although if you’d like to see more examples of my work, send me an email at <a href="mailto:treyoehmler@gmail.com"><u>treyoehmler@gmail.com</u></a> or check out my <a href="http://github.com/toehmler"><u>GitHub</u></a>.</p>
+
               </div>
               <div class="step" data-step-no="4">
                   <a class="project-link" href="https://domcbd.co" target="__blank">
                       <img src="/domcbd.png" class="img-fluid mb-3">
                   </a>
                   <a href="https://domcbd.co" class="h5 fw-500 project-link" target="__blank">domcbd.co</a>
-                  <p class="fw-300">An online storefront for DomCBD. Includes a blog with a custom content management system built from the ground up.</p>
+                  <p class="fw-300">Built as a promotional site for the company DomCBD, this project will soon be serving as online storefront for the brand as well. Made with Laravel and Vue, this project features a custom-built content management system and interacts with various Shopify APIs to manage and display products.</p>
               </div>
               <div class="step" data-step-no="5">
                   <a class="project-link" href="https://dompen.co" target="__blank">
                       <img src="/dompen.png" class="img-fluid mb-3">
                   </a>
                   <a href="https://dompen.co" class="h5 fw-500 project-link" target="__blank">dompen.co</a>
-                  <p class="fw-300">A informational and branding site for DomPen. Includes a blog, store locatator and dynamic, high-quality graphics.</p>
+                  <p class="fw-300">Developed as a branding site for DomPen, a sister company of DomCBD, this project is built with mobile compatibility, responsiveness and performance at the top of mind. Through utilizing best practices for search engine optimization and accessibility this site serves as a great example of a beautiful and reliable branding strategy for businesses across any industry.</p>
               </div>
               <div class="step" data-step-no="6">
                   <a class="project-link" href="https://onelifemh.org" target="__blank">
@@ -74,7 +88,7 @@
               </div>
               <div class="step" data-step-no="7">
                   <a href="https://onelifemh.org" target="__blank" class="project-link h5 fw-500">onelifemh.org</a>
-                  <p class="fw-300">A promotional website for OneLife, a fundraising organization for pediatric brain cancer. Includes newsletter integration and Stripe payment processing.</p>
+                  <p class="fw-300">Designed and developed as an informational website for a student run-charity organization at Middlebury College, this project includes a custom newsletter subscription sign-up form, as well as integration with Stripe to accept donations online. The design is highly responsive and has helped the charity nearly double its annual fundraising goal in the last three months alone.</p>
               </div>
               <div id="contact" class="step" data-step-no="8">
                   <p class="h2 fw-500 mb-3">Contact</p>

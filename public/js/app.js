@@ -1883,6 +1883,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
  // for cross-browser support
 
 
@@ -38495,10 +38509,49 @@ var render = function() {
                     "a",
                     {
                       staticClass: "fw-500 ml-2 tracking-in-expand",
+                      attrs: { href: "/res2019.pdf", target: "_blank" }
+                    },
+                    [_vm._v("resume")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "fw-500 ml-2 tracking-in-expand",
                       attrs: { href: "#contact" },
                       on: { click: _vm.closeMobileMenu }
                     },
                     [_vm._v("contact")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "d-flex flex-row ml-2 tracking-in-expand mt-2"
+                    },
+                    [
+                      _c("a", { attrs: { href: "tel:203-722-1497" } }, [
+                        _c("i", { staticClass: "fas fa-phone nav-icon" })
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          attrs: {
+                            href: "https://github.com/toehmler",
+                            target: "__blank"
+                          }
+                        },
+                        [_c("i", { staticClass: "fab fa-github nav-icon" })]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        { attrs: { href: "mailto:treyoehmler@gmail.com" } },
+                        [_c("i", { staticClass: "far fa-envelope nav-icon" })]
+                      )
+                    ]
                   )
                 ]
               ),
@@ -38509,13 +38562,15 @@ var render = function() {
                 [
                   _c(
                     "p",
-                    { staticClass: "text-center h1 fw-500 bounce-in-top" },
-                    [_vm._v("Hi.")]
+                    { staticClass: "text-center h4 fw-500 bounce-in-top" },
+                    [_vm._v("I'm a developer.")]
                   ),
                   _vm._v(" "),
-                  _c("p", { staticClass: "text-center fw-300 text-focus-in" }, [
-                    _vm._v("I build websites.")
-                  ]),
+                  _c(
+                    "p",
+                    { staticClass: "text-center px-4 fw-300 text-focus-in" },
+                    [_vm._v("Scroll down to learn a bit about me.")]
+                  ),
                   _vm._v(" "),
                   _c("div", { attrs: { id: "about" } })
                 ]
@@ -38527,23 +38582,69 @@ var render = function() {
                 [
                   _c("p", { staticClass: "h5 fw-500 mb-3" }, [
                     _vm._v(
-                      "My name is Trey. I'm a 20 year old web designer, developer and college student. I’m currently studying computer science and math at Middlebury College."
+                      "I’m highly driven and I enjoy work that challenges me to learn new ways of thinking, new skills and new technologies."
                     )
                   ]),
                   _vm._v(" "),
                   _c("p", { staticClass: "fw-300" }, [
                     _vm._v(
-                      "I starting teach myself to program when I was 11. Starting with simple websites, I worked my way up to building full-stack web apps, iPhone apps, and developing for motion sensing technology. Nowadays, I have a wide range of development-related interests, though I primarily focus my efforts on creating immersive, responsive and memorable websites."
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "h4 fw-500" }, [
-                    _vm._v("Technical Experience")
+                      "I’ve been programming since I was 11 years old and started by teaching myself Objective-C and how to make iPhone apps. I’ve had a passion for developing ever since and have a wide range of computer-related interests. I’ve received "
+                    ),
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          href:
+                            "http://nchscourant.com/trey-oehmler-a-self-taught-technology-mastermind/",
+                          target: "_blank"
+                        }
+                      },
+                      [_c("u", [_vm._v("significant recognition")])]
+                    ),
+                    _vm._v(" for "),
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          href:
+                            "https://www.newcanaannewsonline.com/news/article/Not-your-father-s-science-fair-Tech-Night-2011-1016715.php",
+                          target: "_blank"
+                        }
+                      },
+                      [_c("u", [_vm._v("my work")])]
+                    ),
+                    _vm._v(
+                      ", including in 2014 by Complex Magazine, which listed me as one of the "
+                    ),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "fw-400",
+                        attrs: {
+                          target: "_blank",
+                          href:
+                            "https://www.complex.com/pop-culture/2013/01/the-10-youngest-tech-prodigies-right-now/trey-oehmler"
+                        }
+                      },
+                      [_c("u", [_vm._v("top 10 youngest tech prodigies")])]
+                    ),
+                    _vm._v(" in the world. At the moment I am a junior at "),
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          href:
+                            "https://athletics.middlebury.edu/sports/mswimdive/2018-19/bios/oehmler_trey_e1m3"
+                        }
+                      },
+                      [_c("u", [_vm._v("Middlebury College")])]
+                    ),
+                    _vm._v(" studying Computer Science and Mathematics. ")
                   ]),
                   _vm._v(" "),
                   _c("p", { staticClass: "fw-300" }, [
                     _vm._v(
-                      "I have a passion for problem solving and figuring things out. I try to learn as many new skills and technologies as possible so that I can deliver work that’s in touch with current digital design trends while prioritizing performance. Recently, I’ve turned my focus  towards full-stack web development. Below I’ve listed the tools and languages I feel most comfortable using."
+                      "I started building full-stack web applications before I finished seventh grade. With over eight years of programming experience I have developed the ability to quickly learn new languages and technologies at a pace that allows me stay on top of current design trends while prioritizing performance and compatibility. Through growing up during the dawn of the digital and smartphone era, I have been using and developing for the web for the majority of my life and truly believe in the power of the internet and technology to have a lasting impact on its users. Below you’ll find a list of the languages, frameworks and tools and I find myself using most frequently."
                     )
                   ]),
                   _vm._v(" "),
@@ -38619,8 +38720,18 @@ var render = function() {
                   _vm._v(" "),
                   _c("p", { staticClass: "fw-300" }, [
                     _vm._v(
-                      "I can handle projects from scratch or projects for established brands with preexisting visuals and aesthetics. Below is a collection of some of my web development work and some of the projects I'm currently involved in. "
-                    )
+                      "Since I started freelancing I’ve done work for a wide variety of different business, organizations and non-profits. I can handle projects from scratch or projects for brands with pre-existing visuals and aesthetics. I’ve included a list of my some of my favorite and most recent projects, although if you’d like to see more examples of my work, send me an email at "
+                    ),
+                    _c(
+                      "a",
+                      { attrs: { href: "mailto:treyoehmler@gmail.com" } },
+                      [_c("u", [_vm._v("treyoehmler@gmail.com")])]
+                    ),
+                    _vm._v(" or check out my "),
+                    _c("a", { attrs: { href: "http://github.com/toehmler" } }, [
+                      _c("u", [_vm._v("GitHub")])
+                    ]),
+                    _vm._v(".")
                   ])
                 ]
               ),
@@ -38654,7 +38765,7 @@ var render = function() {
                   _vm._v(" "),
                   _c("p", { staticClass: "fw-300" }, [
                     _vm._v(
-                      "An online storefront for DomCBD. Includes a blog with a custom content management system built from the ground up."
+                      "Built as a promotional site for the company DomCBD, this project will soon be serving as online storefront for the brand as well. Made with Laravel and Vue, this project features a custom-built content management system and interacts with various Shopify APIs to manage and display products."
                     )
                   ])
                 ]
@@ -38689,7 +38800,7 @@ var render = function() {
                   _vm._v(" "),
                   _c("p", { staticClass: "fw-300" }, [
                     _vm._v(
-                      "A informational and branding site for DomPen. Includes a blog, store locatator and dynamic, high-quality graphics."
+                      "Developed as a branding site for DomPen, a sister company of DomCBD, this project is built with mobile compatibility, responsiveness and performance at the top of mind. Through utilizing best practices for search engine optimization and accessibility this site serves as a great example of a beautiful and reliable branding strategy for businesses across any industry."
                     )
                   ])
                 ]
@@ -38736,7 +38847,7 @@ var render = function() {
                   _vm._v(" "),
                   _c("p", { staticClass: "fw-300" }, [
                     _vm._v(
-                      "A promotional website for OneLife, a fundraising organization for pediatric brain cancer. Includes newsletter integration and Stripe payment processing."
+                      "Designed and developed as an informational website for a student run-charity organization at Middlebury College, this project includes a custom newsletter subscription sign-up form, as well as integration with Stripe to accept donations online. The design is highly responsive and has helped the charity nearly double its annual fundraising goal in the last three months alone."
                     )
                   ])
                 ]
