@@ -68,29 +68,35 @@
 
               </div>
               <div class="step" data-step-no="4">
+                  <img src="/brains.jpeg" class="img-fluid mb-4">
+                  <a href="" class="h5 fw-500 project-link" target="__blank">Automatic Brain Tumor Segmentation</a>
+                  <p class="fw-300">
+                  This self-directed research project utilizes convolutional neural networks to classify brain tissues in MRI scans and focuses on gliomas, the most common form of brain tumor. While my research is ongoing, the current direction targets high grade gliomas in particular. Tissues can be classified as either non-tumor, necrosis, edema, non-enhancing or enhancing tumor regions. The data used for this project was obtained as part of the multimodal brain tumor segmentation challenge (<a href="https://www.smir.ch/BRATS/Start2015"><u>BRATs</u></a>), which is held annually by the UPenn School of Medicine. To view the most recent progress on this project, please refer to my <a href="https://github.com/toehmler"><u>GitHub</u></a>.</p>
+              </div>
+              <div class="step" data-step-no="5">
                   <a class="project-link" href="https://domcbd.co" target="__blank">
                       <img src="/domcbd.png" class="img-fluid mb-3">
                   </a>
                   <a href="https://domcbd.co" class="h5 fw-500 project-link" target="__blank">domcbd.co</a>
                   <p class="fw-300">Built as a promotional site for the company DomCBD, this project will soon be serving as online storefront for the brand as well. Made with Laravel and Vue, this project features a custom-built content management system and interacts with various Shopify APIs to manage and display products.</p>
               </div>
-              <div class="step" data-step-no="5">
+              <div class="step" data-step-no="6">
                   <a class="project-link" href="https://dompen.co" target="__blank">
                       <img src="/dompen.png" class="img-fluid mb-3">
                   </a>
                   <a href="https://dompen.co" class="h5 fw-500 project-link" target="__blank">dompen.co</a>
                   <p class="fw-300">Developed as a branding site for DomPen, a sister company of DomCBD, this project is built with mobile compatibility, responsiveness and performance at the top of mind. Through utilizing best practices for search engine optimization and accessibility this site serves as a great example of a beautiful and reliable branding strategy for businesses across any industry.</p>
               </div>
-              <div class="step" data-step-no="6">
+              <div class="step" data-step-no="7">
                   <a class="project-link" href="https://onelifemh.org" target="__blank">
                       <img src="/onelife.png" class="img-fluid mb-3">
                   </a>
               </div>
-              <div class="step" data-step-no="7">
+              <div class="step" data-step-no="8">
                   <a href="https://onelifemh.org" target="__blank" class="project-link h5 fw-500">onelifemh.org</a>
                   <p class="fw-300">Designed and developed as an informational website for a student run-charity organization at Middlebury College, this project includes a custom newsletter subscription sign-up form, as well as integration with Stripe to accept donations online. The design is highly responsive and has helped the charity nearly double its annual fundraising goal in the last three months alone.</p>
               </div>
-              <div id="contact" class="step" data-step-no="8">
+              <div id="contact" class="step" data-step-no="9">
                   <p class="h2 fw-500 mb-3">Contact</p>
                   <p class="fw-300">Interested in starting a project with me? Feel free to reach out! I work with my clients to determine compensation well below the market average, while still creating websites that will set you, your brand, or your organization apart.</p>
                   <a href="mailto:treyoehmler@gmail.com"><i class="far fa-envelope contact-icon"></i><span class="small">treyoehmler@gmail.com</span></a>
