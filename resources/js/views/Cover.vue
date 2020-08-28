@@ -29,7 +29,7 @@
               </div>
               <div class="step" data-step-no="1">
                   <p class="text-center h4 fw-500 bounce-in-top">I'm a developer.</p>
-                  <p class="text-center px-4 fw-300 text-focus-in">Scroll down to learn a bit about me.</p>
+                  <p class="text-center px-4 fw-300 text-focus-in">Scroll down to learn a bit about me</p>
                   <div id="about"></div>
               </div>
               <div class="step" data-step-no="2">
