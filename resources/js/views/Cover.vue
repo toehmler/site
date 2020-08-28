@@ -13,7 +13,7 @@
                   <div id="divider" class="tracking-in-expand"></div>
                   <a href="#about" v-on:click="closeMobileMenu" class="fw-500 mt-3 ml-2 tracking-in-expand d-inline">about</a>
                   <a href="#projects" v-on:click="closeMobileMenu" class="fw-500 ml-2 tracking-in-expand">work</a>
-                  <a href="/res2019.pdf" target="_blank" class="fw-500 ml-2 tracking-in-expand">resume</a>
+                  <a href="/res2020.pdf" target="_blank" class="fw-500 ml-2 tracking-in-expand">resume</a>
                   <a href="#contact" v-on:click="closeMobileMenu" class="fw-500 ml-2 tracking-in-expand">contact</a>
                   <div class="d-flex flex-row ml-2 tracking-in-expand mt-2">
                       <a href="tel:203-722-1497"><i class="fas fa-phone nav-icon"></i></a>
@@ -29,13 +29,13 @@
               </div>
               <div class="step" data-step-no="1">
                   <p class="text-center h4 fw-500 bounce-in-top">I'm a developer.</p>
-                  <p class="text-center px-4 fw-300 text-focus-in">Scroll down to learn a bit about me</p>
+                  <p class="text-center px-4 fw-300 text-focus-in">Scroll down to learn a bit about me.</p>
                   <div id="about"></div>
               </div>
               <div class="step" data-step-no="2">
                   <p class="h5 fw-500 mb-3">I’m highly driven and I enjoy work that challenges me to learn new ways of thinking, new skills and new technologies.</p>
-                  <p class="fw-300">I’ve been programming since I was 11 years old and started by teaching myself Objective-C and how to make iPhone apps. I’ve had a passion for developing ever since and have a wide range of computer-related interests. I’ve received <a href="http://nchscourant.com/trey-oehmler-a-self-taught-technology-mastermind/" target="_blank"><u>significant recognition</u></a> for <a href="https://www.newcanaannewsonline.com/news/article/Not-your-father-s-science-fair-Tech-Night-2011-1016715.php" target="_blank"><u>my work</u></a>, including in 2014 by Complex Magazine, which listed me as one of the <a target="_blank" href="https://www.complex.com/pop-culture/2013/01/the-10-youngest-tech-prodigies-right-now/trey-oehmler"><u>top 10 youngest tech prodigies</u></a> in the world. At the moment I am a junior at <a href="https://athletics.middlebury.edu/sports/mswimdive/2018-19/bios/oehmler_trey_e1m3"><u>Middlebury College</u></a> studying Computer Science and Mathematics. </p>
-                  <p class="fw-300">With over eight years of programming experience I have developed the ability to quickly learn new languages and technologies at a pace that allows me stay on top of current design trends while prioritizing performance and compatibility. Through growing up during the dawn of the digital and smartphone era, I have been using and developing for the web for the majority of my life and truly believe in the power of the internet and technology to have a lasting impact on its users. Below you’ll find a list of the languages, frameworks and tools and I find myself using most frequently.</p> 
+                  <p class="fw-300">I’ve been programming since I was 11 years old and started by teaching myself Objective-C and how to make iPhone apps. I’ve had a passion for developing ever since and have a wide range of computer-related interests. I’ve received <a href="http://nchscourant.com/trey-oehmler-a-self-taught-technology-mastermind/" target="_blank"><u>significant recognition</u></a> for <a href="https://www.newcanaannewsonline.com/news/article/Not-your-father-s-science-fair-Tech-Night-2011-1016715.php" target="_blank"><u>my work</u></a>, including in 2014 by Complex Magazine, which listed me as one of the <a target="_blank" href="https://www.complex.com/pop-culture/2013/01/the-10-youngest-tech-prodigies-right-now/trey-oehmler"><u>top 10 youngest tech prodigies</u></a> in the world. This spring I graduated from <a href="https://athletics.middlebury.edu/sports/mswimdive/2018-19/bios/oehmler_trey_e1m3"><u>Middlebury College</u></a> where I studied Computer Science and Mathematics. </p>
+                  <p class="fw-300">With over nine years of programming experience I have developed the ability to quickly learn new languages and technologies at a pace that allows me stay on top of current design trends while prioritizing performance and compatibility. Through growing up during the dawn of the digital and smartphone era, I have been using and developing for the web for the majority of my life and truly believe in the power of the internet and technology to have a lasting impact on its users. Below you’ll find a list of the languages, frameworks and tools and I find myself using most frequently.</p> 
 
 
                   <!--
@@ -55,6 +55,7 @@
                       <span class="badge badge-pill badge-dark">ES6 / Babel</span>
                       <span class="badge badge-pill badge-dark">Python</span>
                       <span class="badge badge-pill badge-dark">C</span>
+                      <span class="badge badge-pill badge-dark">C++</span>
                       <span class="badge badge-pill badge-dark">Java</span>
                       <span class="badge badge-pill badge-dark">MYSQL</span>
                       <span class="badge badge-pill badge-dark">Photoshop</span>
