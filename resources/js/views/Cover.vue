@@ -13,7 +13,7 @@
                   <div id="divider" class="tracking-in-expand"></div>
                   <a href="#about" v-on:click="closeMobileMenu" class="fw-500 mt-3 ml-2 tracking-in-expand d-inline">about</a>
                   <a href="#projects" v-on:click="closeMobileMenu" class="fw-500 ml-2 tracking-in-expand">work</a>
-                  <a href="/res2020.pdf" target="_blank" class="fw-500 ml-2 tracking-in-expand">resume</a>
+                  <a href="/trey_oehmler_resume.pdf" target="_blank" class="fw-500 ml-2 tracking-in-expand">resume</a>
                   <a href="#contact" v-on:click="closeMobileMenu" class="fw-500 ml-2 tracking-in-expand">contact</a>
                   <div class="d-flex flex-row ml-2 tracking-in-expand mt-2">
                       <a href="tel:203-722-1497"><i class="fas fa-phone nav-icon"></i></a>
