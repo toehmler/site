@@ -89,13 +89,13 @@ export default {
         {
           step: 2,
           title: 'Dompen',
-          src: '/dompen_tile.png',
+          src: '/dompen_tile.jpg',
           href: '/dompen',
         },
         {
           step:3,
           title: 'DomCBD',
-          src: '/domcbd_tile_2.png',
+          src: '/domcbd_tile_2.jpg',
           href: '/domcbd',
 
         },
@@ -103,14 +103,14 @@ export default {
         {
           step:4,
           title: 'Gardenhouse Brands',
-          src: '/gardenhouse_tile.png',
+          src: '/gardenhouse_tile.jpg',
           href: 'https://gardenhousebrands.com',
 
         },
         {
           step:5,
           title: 'Calavera Cannabis',
-          src: '/calavera_tile.png',
+          src: '/calavera_tile.jpg',
           href: 'https://calaveracannabis.com',
         },
 
