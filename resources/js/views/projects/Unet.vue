@@ -38,7 +38,10 @@
           <div class="col-md-9 col-sm-10 col-12">
             <h2 class="mr-auto text-light">The Data</h2>
             <p class="fw-300 text-light">To better understand the problem we’re trying to solve I think it helps to visualize the data and break down the segmentation process in to its most basic parts. This project uses data from the <a href="https://www.med.upenn.edu/cbica/brats2020/data.html"><u>MICCAI 2015 BRaTS Challenge</u></a>. While the dataset includes examples of both high-grade and low-grade gliomas, for now, we’ll only be focusing on high-grade gliomas due to scans of this form being more widely available. The dataset has the labeled MRI scans of 220 high-grade glioma patients. The scans for each patient are comprised of 155 slices across 4 seperate modalities, <span class="fw-600">FLAIR</span> <span class="fw-600">T1</span>, <span class="fw-600">T1c</span>, and <span class="fw-600">T2</span>.</p>
- 
+             <p class="fw-300 text-light">All these MRI’s are pretty to look at, but they don’t mean much if you’re not a radiologist or if you don’t know what you’re looking for. The labels included with the scans for each patient summarize the annotations of several experts and distinguish the various regions of the tumors. In the example below, we can see what the label for an individual slice looks like.</p>
+            <img src="/label_diagram.jpg" class="img-fluid my-4">
+            <p class="fw-300 text-light">In computer vision, this type of problem is called <span class="fw-600">semantic segmentation</span>. It’s important to note how this task differs slightly from <span class="fw-600">object detection</span> and <span class="fw-600">instance segmentation</span>. While we not only need to classify each pixel in the input image, we also essentially need to localize each of various tumor subregions simultaneously. Tumors are relatively solid objects (at least in comparison to a gas), and while I guess it’s not impossible for a tumor to be in two places in the brain at once, I’ve never come across any examples of this in any of the public datasets I’ve looked at (although I am certainly no neurologist). The localized nature of tumors should be intuitive: like regions are closer to like regions. We can summarize this with the observation that <i>the classification of a pixel is influenced by the classifications of the surrounding pixels</i>. This observation is key to understanding the use of convolution neural networks for this type of problem.</p>
+
           </div>
         </div>
       </div>
@@ -196,6 +199,18 @@
           </div>
         </div>
       </div>
+      <div class="container d-lg-none">
+        <div class="col-sm-10 col-12">
+          <h2 class="mr-auto">The UNet Architecture</h2>
+          <p>Now that we’ve touched on autoencoders and transposed convolutions we can look at the UNet architecture and understand the advantages it provides. Introduced in May 2015 by Olaf Ronneberger and a team of researchers from the University of Freiburg in Germany, the architecture immediately stood out compared to other architectures due to how well it performed in a number of different biomedical segmentation challenges. The network is made up of a <i>contracting</i> (encoder) path and <i>expansive</i> (decoder) path.</p> 
+          <img src="/unet.jpg" class="img-fluid">
+          <p>The <span class="fw-600">fully convolutional</span> nature of the network allows for variably-sized inputs, while the use of transposed convolutions in the decoder path enables precise localization of features. For a network to be fully convolutional simply means there are no <i>dense</i> or <i>fully connected</i> layers. These are the layers that allow for classification within a standard CNN. In a FCN, 1x1 convolutions fulfill the role of a dense layer by changing the dimensionality of our filter space. In this example a 1x1 convolution is used to map the feature vectors in the second-to-last layer to the desired number of classes.</p>
+            <p>There are two major features to this architecture that I want to highlight. The first of these is the way in which the filter map count is doubled at every point we downsample, or cut in half at every point we upsample. The result of this design choice is that the network is better able to propagate contextual information to higher resolution layers. The second key feature is the incorporation of <span class="fw-600">skip connections</span>. In the network diagram, these are represented by the grey arrows that point from the contracting to the expansive path. This architecture uses skip connections by concatenation, and are crucial in restoring the spatial resolution lost from the input due to downsampling. Doing this enables much more precise localization as the concatenation is followed immediately by a convolutional layer that can be trained to more accurately reassemble our input within the expansion path.</p>
+        </div>
+      </div>
+
+
+
       <div class="d-none d-lg-block">
         <Scrollama
           :debug="false"
