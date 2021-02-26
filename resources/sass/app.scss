@@ -2,6 +2,9 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Raleway:300,400,500,600,700');
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
 // Variables
 @import 'variables';
 
@@ -9,7 +12,108 @@
 @import '~bootstrap/scss/bootstrap';
 
 @import 'type';
+@import 'nav';
+@import 'home';
+@import 'domcbd';
+@import 'footer';
+@import 'unet';
 
+.scrolling-wrapper {
+  overflow-x:scroll;
+  overflow-y:hidden;
+  white-space:nowrap;
+  .project-card {
+    display:inline-block;
+  }
+}
+
+.prlx-wrapper {
+  height:100vh;
+  overflow-x:hidden;
+  perspective:2px;
+  -webkit-perspective:2px;
+}
+
+.prlx {
+  position: relative;
+  height:100vh;
+}
+.prlx::after {
+  content:" ";
+  position:absolute;
+  top:0;right:0;bottom:0;left:0;
+  transform:translateZ(-1px) scale(1.5);
+  background-size:cover;
+  background-position:center center;
+  z-index:-1;
+}
+
+#dompen {
+
+
+  #bg-1 {
+    &::after { background-image:url('/projects/dompen/dompen_home.jpg'); }
+    height: 120vh;
+    min-height:1000px;
+  }
+
+  #bg-2::after {
+    background-image:url('/projects/dompen/phones_full.jpg');
+  }
+  #bg-3::after { 
+    background-image:url('/projects/dompen/dompen_home_test.jpg');
+    @include media-breakpoint-up(md) {
+      background-image:url('/projects/dompen/cart_grid.png');
+    }
+  }
+
+
+  #bg-4::after { 
+    background-image:url('/projects/dompen/handheld_phone.png');
+    @include media-breakpoint-up(md) { background-image:url('/projects/dompen/dompen_find.png'); }
+  }
+}
+
+
+
+
+.light-button, .dark-button {
+    font-weight:600;
+    background-color:transparent;
+    transition:all 200ms ease-in-out;
+    text-decoration:none;
+    padding:0.5rem 2rem;
+    font-size:0.75rem;
+    &:hover {
+        text-decoration:none;
+        cursor:pointer;
+        transition:all 200ms ease-in-out;
+    }
+    &:focus { outline:0!important }
+
+}
+
+.light-button {
+    color:$light;
+    border:2px solid $light;
+    &:hover {
+        color:$dark-blue !important;
+        background-color:$light;
+    }
+}
+.dark-button, .darkButton {
+    color:$dark-blue;
+    border:2px solid $dark-blue;
+    user-select:none;
+    &:hover {
+        color:$light;
+        background-color:$dark-blue;
+    }
+}
+
+.container { 
+  max-width:1400px !important;
+}
 .project-link:hover {cursor:pointer}
 .badge {
     margin-right:0.3rem;
@@ -97,6 +201,37 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
     flex: 6;
   }
 }
+#home {
+  .scrollama-graphic {
+    flex:5;
+  }
+  .scrollama-steps {
+    flex:6;
+  }
+}
+#domcbd {
+  .scrollama-graphic {
+  }
+  
+  .scrollama-container {
+    flex-direction:column;
+  }
+  @include media-breakpoint-up(lg) {
+    .scrollama-graphic { flex:1; }
+    .scrollama-steps { flex:2.5;}
+
+    .scrollama-container {
+      flex-direction:row;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    .scrollama-graphic { flex:1; }
+    .scrollama-steps { flex:2;}
+  }
+}
+
+
+
 .pos-rel {position:relative !important;}
 
 // your elements styles
@@ -108,19 +243,30 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
   flex-direction:column;
   justify-content: center;
 }
+
 .step {
-  margin-bottom: 5vh;
   display: flex;
   flex-direction:column;
   justify-content: center;
-  &:last-child {
-    margin-bottom: 5vh; 
+}
+#domcbd {
+  .step {
+    padding:0 !important;
+    display:inline-block;
   }
-  &:first-child {
-      padding:45vh 0;
-      display:none;
-      @include media-breakpoint-up(md) {display:block;}
+}
+#home {
+  .step {
+    margin-bottom:5vh;
+    &:first-child {
+        padding:45vh 0;
+        display:none;
+        @include media-breakpoint-up(md) {display:block;}
+    }
 
+    &:last-child {
+      margin-bottom: 5vh; 
+    }
   }
 }
 

@@ -1,0 +1,23 @@
+#domcbd {
+  #bg-1 {
+    &::after {
+      background-image:url('/projects/domcbd/mix.png');
+    }
+  }
+  #bg-2 {
+    &::after {
+      background-image:url('/projects/domcbd/product_page.jpg');
+    }
+  }
+  #bg-3 {
+    &::after {
+      background-image:url('/projects/domcbd/portrait_ipads.png');
+    }
+  }
+  #bg-4 {
+    &::after {
+      background-image:url('/projects/domcbd/learn_page.jpg');
+    }
+  }
+
+}

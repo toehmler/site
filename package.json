@@ -12,6 +12,8 @@
     "devDependencies": {
         "axios": "^0.18",
         "bootstrap": "^4.0.0",
+        "browser-sync": "^2.26.13",
+        "browser-sync-webpack-plugin": "^2.0.1",
         "cross-env": "^5.1",
         "jquery": "^3.2",
         "laravel-mix": "^4.0.7",
@@ -27,6 +29,7 @@
         "body-scroll-lock": "^2.6.1",
         "intersection-observer": "^0.5.1",
         "scrollama": "^1.4.4",
+        "vue-responsive-video-background-player": "^1.2.1",
         "vue-router": "^3.0.2",
         "vue-scrollama": "^1.1.1",
         "vue-scrollto": "^2.14.0"

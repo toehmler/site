@@ -20,6 +20,14 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
+Vue.component('nav-bar', require('@/js/components/NavigationBar.vue').default);
+Vue.component('contact-footer', require('@/js/components/ContactFooter.vue').default);
+
+import VideoBackground from 'vue-responsive-video-background-player';
+
+Vue.component('video-background', VideoBackground);
+
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -28,6 +36,10 @@ window.Vue = require('vue');
  */
 import Routes from '@/js/routes.js';
 import App from '@/js/views/App';
+
+//import { Plugin } from 'vue-responsive-video-background-player'
+
+//Vue.use(Plugin);
 
 const app = new Vue({
     el: '#app',

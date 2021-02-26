@@ -1,0 +1,260 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Raleway:300,400,500,600,700');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import 'type';
+@import 'nav';
+@import 'home';
+@import 'footer';
+
+.prlx-wrapper {
+  height:100vh;
+  overflow-x:hidden;
+  perspective:2px;
+  -webkit-perspective:2px;
+}
+
+.prlx {
+  position: relative;
+  height: 110vh;
+}
+.prlx::after {
+  content:" ";
+  position:absolute;
+  top:0;right:0;bottom:0;left:0;
+  transform:translateZ(-1px) scale(1.5);
+  background-image:url('/projects/dompen/phones_full.jpg');
+  background-size:cover;
+  background-position:center center;
+  z-index:-1;
+}
+
+
+
+.light-button, .dark-button {
+    font-weight:600;
+    background-color:transparent;
+    transition:all 200ms ease-in-out;
+    text-decoration:none;
+    padding:0.5rem 2rem;
+    font-size:0.75rem;
+    &:hover {
+        text-decoration:none;
+        cursor:pointer;
+        transition:all 200ms ease-in-out;
+    }
+    &:focus { outline:0!important }
+
+}
+
+.light-button {
+    color:$light;
+    border:2px solid $light;
+    &:hover {
+        color:$dark-blue !important;
+        background-color:$light;
+    }
+}
+.dark-button, .darkButton {
+    color:$dark-blue;
+    border:2px solid $dark-blue;
+    user-select:none;
+    &:hover {
+        color:$light;
+        background-color:$dark-blue;
+    }
+}
+
+.container { 
+  max-width:1400px !important;
+}
+.project-link:hover {cursor:pointer}
+.badge {
+    margin-right:0.3rem;
+    font-size:0.7rem;
+}
+
+body::-webkit-scrollbar-track
+{
+	background-color: $body-bg;
+}
+
+body::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: $body-bg;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	background-color: $dark;
+}
+
+body {transition:all 200ms ease-in-out;}
+.bg-dark {
+    transition:all 200ms ease-in-out;
+    background-color:$dark !important;
+}
+
+a {
+    color: $dark;
+    text-decoration:none !important;
+    &:hover {
+        text-decoration:none !important;
+        cursor:pointer;
+    }
+
+}
+.text-light {
+    transition:all 200ms ease-in-out;
+    color:$light !important;
+    a {color:$light !important}
+}
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+
+@import 'cover';
+
+@import 'animations';
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+    line-height: $line-height-base;
+}
+
+.logo-top-text {
+    position:relative;
+    top:1.5rem;
+}
+#divider {
+    width:85%;
+    height:3px;
+    background-color:$dark;
+    transition:all 200ms ease-in-out;
+}
+.light-divider {
+    transition:all 200ms ease-in-out;
+    background-color:$light !important;
+}
+
+.scrollama-container {
+  display: flex;
+  flex-direction:column;
+  @include media-breakpoint-up(md) {
+      flex-direction:row;
+  }
+  .scrollama-graphic {
+    flex: 5;
+    height: 100vh;
+    z-index:5;
+  }
+  .scrollama-steps {
+    flex: 6;
+  }
+}
+.pos-rel {position:relative !important;}
+
+// your elements styles
+.graphic {
+  height: 100%;
+  margin: 0 2rem 0 0;
+  font-size: 1rem;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+}
+.step {
+  margin-bottom: 5vh;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  &:last-child {
+    margin-bottom: 5vh; 
+  }
+  &:first-child {
+      padding:45vh 0;
+      display:none;
+      @include media-breakpoint-up(md) {display:block;}
+
+  }
+}
+
+.contact-icon {
+    font-size:1rem !important;
+    margin-right:0.5rem;
+}
+
+.nav-icon {
+    font-size:1.2rem !important;
+    margin-right:0.6rem;
+}
+
+
+#graphic-slot {
+    transition:all 200ms ease-in-out;
+}
+.hidden-mobile {
+    transition:all 200ms ease-in-out;
+    pointer-events:none;
+    @include media-breakpoint-up(md) {
+        opacity:1;
+        pointer-events:all;
+    }
+    opacity:0;
+}
+
+#menu-toggle {
+    position:fixed;
+    z-index: 5;
+    top:0.5rem;
+    left:0.75rem;
+    @include media-breakpoint-up(md) {display:none;}
+    font-size:2rem;
+    text-shadow:0 1px 3px rgba(0,0,0,0.20), 0 1px 2px rgba(0,0,0,0.34);
+    transition:all 200ms ease-in-out;
+    &:hover {
+        cursor:pointer;
+    }
+}
+.hidden-toggle {
+    transition:all 200ms ease-in-out;
+    opacity:0;
+    pointer-events:none !important;
+}
+
+#overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:3;
+    background-color:$body-bg;
+    opacity:0.9;
+    height:100%;
+    width:100%;
+    transition:all 200ms ease-in-out;
+    &.hidden-overlay {
+        transition:all 200ms ease-in-out;
+        opacity:0;
+        pointer-events:none;
+    }
+
+}
+
+.no-scroll {
+    overflow:hidden;
+}
+
+
+

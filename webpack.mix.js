@@ -23,3 +23,10 @@ mix.webpackConfig({
 
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');
+
+mix.browserSync({
+  proxy: "https://trey.test/",
+  https: true
+});
+
+

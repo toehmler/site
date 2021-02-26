@@ -1,11 +1,21 @@
 
+
 // Body
-$body-bg: #f8fafc;
+$body-bg: #e7ebed;
 
 // Typography
-$font-family-sans-serif: "Lato", sans-serif;
+$font-family-sans-serif: "Source Sans Pro", sans-serif;
+$font-family-serif: "Playfair Display", serif;
 $font-size-base: 1rem;
 $line-height-base: 1.8;
+h1,h2,h3,h4,h5,h6,p {line-height:$line-height-base;}
+
+.fw-300 { font-weight: 300 !important; }
+.fw-400 { font-weight: 400 !important; }
+.fw-500 { font-weight: 500 !important; }
+.fw-600 { font-weight: 600 !important; }
+.fw-700 { font-weight: 700 !important; }
+
 
 // Colors
 $blue: #3490dc;
@@ -20,4 +30,12 @@ $teal: #4dc0b5;
 $cyan: #6cb2eb;
 
 $dark: #222426; 
+$muted: #707070;
 $light: #FEFFFF;
+
+$dark-blue: #232431;
+.bg-dark-blue{ background-color:$dark-blue}
+
+
+.serif { font-family: $font-family-serif !important; }
+.sans-serif { font-family: $font-family-sans-serif !important; }

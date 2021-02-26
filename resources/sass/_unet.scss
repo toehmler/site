@@ -1,0 +1,19 @@
+#unet {
+  #title {
+    line-height:2.7rem;
+  }
+   p { 
+     line-height:2rem;
+  }
+
+  .scrollama-container {
+    display:flex;
+    .scrollama-graphic {
+      flex:1 !important;
+    }
+    .scrollama-steps {
+      flex:1 !important;
+    }
+  }
+}
+
