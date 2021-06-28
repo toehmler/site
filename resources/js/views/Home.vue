@@ -26,9 +26,6 @@
               <img :src="project.src" class="img-fluid project-tile">
             </a>
           </div>
-          <div class="col-lg-6 col-md-9 text-center">
-            <p class="fw-500 h5">More coming soon.</p>
-          </div>
         </div>
       </div>
     </div>
@@ -81,19 +78,25 @@ export default {
       projects: [
         {
           step:1,
+          title: 'Partisan News Viewer',
+          src: '/news_app_tile.jpg',
+          href: 'https://news.treyoehmler.com',
+        },
+        {
+          step:2,
           title: 'UNet: Automatic Brain Tumor Segmentation',
           src: '/tumor_tile.jpg',
           href: '/unet',
         },
 
         {
-          step: 2,
+          step: 3,
           title: 'Dompen',
           src: '/dompen_tile.jpg',
           href: '/dompen',
         },
         {
-          step:3,
+          step:4,
           title: 'DomCBD',
           src: '/domcbd_tile_2.jpg',
           href: '/domcbd',
@@ -101,14 +104,14 @@ export default {
         },
 
         {
-          step:4,
+          step:5,
           title: 'Gardenhouse Brands',
           src: '/gardenhouse_tile.jpg',
           href: 'https://gardenhousebrands.com',
 
         },
         {
-          step:5,
+          step:6,
           title: 'Calavera Cannabis',
           src: '/calavera_tile.jpg',
           href: 'https://calaveracannabis.com',
